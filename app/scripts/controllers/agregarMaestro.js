@@ -15,18 +15,27 @@ var app = angular.module('app', ['firebase', 'ngRoute'])
 app.factory('agregarMaestro',['$firebaseArray',
 	function($firebaseArray){
 		var ref = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/');
-		var re = ref.child('pepinos/')
-		return $firebaseArray(re);
+		var re = ref.child('pepino/')
+		return $firebaseArray(ref);
 	}]);
 
-app.controller('agregarMaestroController', ['agregarMaestro',
-	function(agregarMaestro){
+app.factory('nombres',['$firebaseArray',
+	function($firebaseArray){
+		var ref = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros');
+		return $firebaseArray(ref);
+	}]);
+
+app.controller('agregarMaestroController', ['agregarMaestro','nombres',
+	function(agregarMaestro, nombres){
 		var am = this;
 
 		am.Maestros = agregarMaestro;
+		am.mostrarNombres = nombres;
 
 		am.anadirMaestro = function(){
-			
+			am.Maestros.$add({
+				nombre: am.nombreMaestro
+			});
 			am.nombreMaestro = '';
 		};
 	}]);

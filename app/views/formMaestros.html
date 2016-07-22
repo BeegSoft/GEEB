@@ -33,11 +33,8 @@
 					<div class="col-xs-3">						
 						<label for="maestro">Maestro</label>	
 						<select class="form-control" name="Materias">
-							<option value="1"></option>
-							<option value="2"></option>
-							<option value="3"></option>
-							<option value="4"></option>
-							<option value="5"></option>
+							<option value="" ng-repeat="nombr in am.mostrarNombres" ng-if="nombr.nombre">{{nombr.nombre}}</option>
+							
 						</select>
 						<br>
 						<br>
