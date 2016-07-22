@@ -1,93 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Maestros</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-	<div class="row">
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-		    <div class="navbar-header" style="padding-left:10px">
-		      <a class="navbar-brand" href=" ">GEEB</a>
-		    </div>		    
-		  </div>
-		</nav>
-	</div>
-
-	<form>
-		<fieldset>
-			<legend>Agregar Maestro</legend>
-			<div class="container">
-				<div class="row">				
-				</div>
-				<div class="row">
-					<div class="col-xs-3">
-						<label for="FullName">Imagen de Perfil</label>
-						<br>
-						<br>
-						<label for="Name">Nombre del Maestro</label>
-						<input type="text" placeholder="Mombre" class="form-control">
-						<br>
-						<label for="FullName">Apellidos</label>
-						<input type="text" placeholder="Apellidos" class="form-control">
-						<br>
-						<label for="Correo">Correo Electronico</label>
-						<input type="text" placeholder="Correo" class="form-control">
-						<br>						
-						<label for="FullName">Materias</label>						
-						<select name="Materias">
-							<option value="1">Algebra</option>
-							<option value="2">calculo</option>
-							<option value="3">estructura</option>
-							<option value="4">diseño</option>
-							<option value="5">ecuaciones</option>
-						</select>
-						<br>
-						<br>
-						<input type="submit" value="Guardar" class="btn btn-primary">
-					</div>
+<form ng-submit="am.anadirMaestro()">
+	<fieldset>
+		<legend>Agregar Maestro</legend>
+		<div class="container">
+			<div class="row">				
+			</div>
+			<div class="row"> 
+				<div class="col-xs-3">
+					<label for="FullName">Imagen de Perfil</label>
+					<br>
+					<br>
+					<label for="Name">Nombre del Maestro</label>
+					<input type="text" placeholder="Mombre" class="form-control" ng-model="am.nombreMaestro">
+					<br>
+					<label for="Correo">Correo Electronico</label>
+					<input type="text" placeholder="Correo" class="form-control">
+					<br>						
+					<input type="submit" value="Guardar" class="btn btn-primary">
 				</div>
 			</div>
-		</fieldset>	  		  	
-	</form>	
-	<hr>		
-	<form>
-		<fieldset>
-			<legend>Añadir Materia</legend>
-			<div class="container">
-				<div class="row">				
-				</div>
-				<div class="row">
-					<div class="col-xs-3">																	
-						<label for="maestro">Maestro</label>						
-						<select name="Materias">
-							<option value="1"></option>
-							<option value="2"></option>
-							<option value="3"></option>
-							<option value="4"></option>
-							<option value="5"></option>
-						</select>
-						<br>
-						<br>
-						<label for="materias">Materias</label>						
-						<select name="Materias">
-							<option value="1">Algebra</option>
-							<option value="2">calculo</option>
-							<option value="3">estructura</option>
-							<option value="4">diseño</option>
-							<option value="5">ecuaciones</option>
-						</select>
-						<br>
-						<br>
-						<input type="submit" class="btn btn-primary">
-					</div>
+		</div>
+	</fieldset>	  		  	
+</form>	
+<hr>		
+<form>
+	<fieldset>
+		<legend>Añadir Materia</legend>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3">						<label for="maestro">Maestro</label>	<select name="Materias">
+						<option value="1"></option>
+						<option value="2"></option>
+						<option value="3"></option>
+						<option value="4"></option>
+						<option value="5"></option>
+					</select>
+					<br>
+					<br>
+					<label for="materias">Materias</label>						
+					<select name="Materias">
+						<option value="1">Algebra</option>
+						<option value="2">calculo</option>
+						<option value="3">estructura</option>
+						<option value="4">diseño</option>
+						<option value="5">ecuaciones</option>
+					</select>
+					<br>
+					<br>
+					<input type="submit" class="btn btn-primary">
 				</div>
 			</div>
-		</fieldset>	  		  	
-	</form>
+		</div>
+	</fieldset>	  		  	
+</form>
 
-</body>
-</html>  

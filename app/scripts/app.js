@@ -30,6 +30,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/agregarMaestro',{
+      templateUrl: 'views/formMaestros.html',
+      controller: 'agregarMaestroController',
+      controllerAs: 'am'
+      })
       .otherwise({
         redirectTo: '/'
       });
