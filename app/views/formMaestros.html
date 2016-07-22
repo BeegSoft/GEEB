@@ -1,55 +1,63 @@
-<form ng-submit="am.anadirMaestro()">
-	<fieldset>
-		<legend>Agregar Maestro</legend>
-		<div class="container">
-			<div class="row">				
-			</div>
-			<div class="row"> 
-				<div class="col-xs-3">
-					<label for="FullName">Imagen de Perfil</label>
-					<br>
-					<br>
-					<label for="Name">Nombre del Maestro</label>
-					<input type="text" placeholder="Mombre" class="form-control" ng-model="am.nombreMaestro">
-					<br>
-					<label for="Correo">Correo Electronico</label>
-					<input type="text" placeholder="Correo" class="form-control">
-					<br>						
-					<input type="submit" value="Guardar" class="btn btn-primary">
+<div class="container-fluid">
+  <div class="col-xs-6">
+  	<form ng-submit="am.anadirMaestro()">
+		<fieldset>
+			<legend>Agregar Maestro</legend>
+			<div class="container">
+				<div class="row">				
+				</div>
+				<div class="row"> 
+					<div class="col-xs-3">
+						<label for="FullName">Imagen de Perfil</label>
+						<br>
+						<br>
+						<label for="Name">Nombre del Maestro</label>
+						<input type="text" placeholder="Mombre" class="form-control" ng-model="am.nombreMaestro">
+						<br>
+						<label for="Correo">Correo Electronico</label>
+						<input type="text" placeholder="Correo" class="form-control">
+						<br>						
+						<input type="submit" value="Guardar" class="btn btn-primary">
+					</div>
 				</div>
 			</div>
-		</div>
-	</fieldset>	  		  	
-</form>	
+		</fieldset>	  		  	
+	</form>	
+  </div>
+  <div class="col-xs-6">
+  	<form>
+		<fieldset>
+			<legend>Añadir Materia</legend>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-3">						
+						<label for="maestro">Maestro</label>	<select name="Materias">
+							<option value="1"></option>
+							<option value="2"></option>
+							<option value="3"></option>
+							<option value="4"></option>
+							<option value="5"></option>
+						</select>
+						<br>
+						<br>
+						<label for="materias">Materias</label>						
+						<select name="Materias">
+							<option value="1">Algebra</option>
+							<option value="2">calculo</option>
+							<option value="3">estructura</option>
+							<option value="4">diseño</option>
+							<option value="5">ecuaciones</option>
+						</select>
+						<br>
+						<br>
+						<input type="submit" class="btn btn-primary">
+					</div>
+				</div>
+			</div>
+		</fieldset>	  		  	
+	</form>
+
+  </div>
+</div>
 <hr>		
-<form>
-	<fieldset>
-		<legend>Añadir Materia</legend>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-3">						<label for="maestro">Maestro</label>	<select name="Materias">
-						<option value="1"></option>
-						<option value="2"></option>
-						<option value="3"></option>
-						<option value="4"></option>
-						<option value="5"></option>
-					</select>
-					<br>
-					<br>
-					<label for="materias">Materias</label>						
-					<select name="Materias">
-						<option value="1">Algebra</option>
-						<option value="2">calculo</option>
-						<option value="3">estructura</option>
-						<option value="4">diseño</option>
-						<option value="5">ecuaciones</option>
-					</select>
-					<br>
-					<br>
-					<input type="submit" class="btn btn-primary">
-				</div>
-			</div>
-		</div>
-	</fieldset>	  		  	
-</form>
 
