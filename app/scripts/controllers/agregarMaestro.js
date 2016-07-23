@@ -31,6 +31,7 @@ app.controller('agregarMaestroController', ['agregarMaestro','nombres',
 
 		am.Maestros = agregarMaestro;
 		am.mostrarNombres = nombres;
+		am.select = 'Rodriguez';
 
 		am.anadirMaestro = function(){
 			am.Maestros.$add({
