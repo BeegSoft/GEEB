@@ -39,9 +39,127 @@ app.controller('agregarMaestroController', ['agregarMaestro','nombres',
 			});
 			am.nombreMaestro = '';
 		};
+
+		
 	}]);
 app.controller('agregarMateriaController',['$firebaseArray',
 	function($firebaseArray){
 		var ama = this;
+
+	}]);
+app.controller('menusController', [
+	function(){
+		var ck = this;
+
+
+		ck.ponerLink = function(){
+			if(document.getElementById("men1").classList.contains('acti')){
+				document.getElementById("men1").classList.remove('acti');
+			};
+			if(document.getElementById("men2").classList.contains('acti')){
+				document.getElementById("men2").classList.remove('acti');
+			};
+			if(document.getElementById("men3").classList.contains('acti')){
+				document.getElementById("men3").classList.remove('acti');
+			};
+			if(document.getElementById("men4").classList.contains('acti')){
+				document.getElementById("men4").classList.remove('acti');
+			};
+			if(document.getElementById("men5").classList.contains('acti')){
+				document.getElementById("men5").classList.remove('acti');
+			};
+			document.getElementById("men0").classList.add('acti');
+		}
+
+		ck.ponerLink1 = function(){
+			if(document.getElementById("men0").classList.contains('acti')){
+				document.getElementById("men0").classList.remove('acti');
+			};
+			if(document.getElementById("men2").classList.contains('acti')){
+				document.getElementById("men2").classList.remove('acti');
+			};
+			if(document.getElementById("men3").classList.contains('acti')){
+				document.getElementById("men3").classList.remove('acti');
+			};
+			if(document.getElementById("men4").classList.contains('acti')){
+				document.getElementById("men4").classList.remove('acti');
+			};
+			if(document.getElementById("men5").classList.contains('acti')){
+				document.getElementById("men5").classList.remove('acti');
+			};
+			document.getElementById("men1").classList.add('acti');
+		}
+		ck.ponerLink2 = function(){
+			if(document.getElementById("men1").classList.contains('acti')){
+				document.getElementById("men1").classList.remove('acti');
+			};
+			if(document.getElementById("men0").classList.contains('acti')){
+				document.getElementById("men0").classList.remove('acti');
+			};
+			if(document.getElementById("men3").classList.contains('acti')){
+				document.getElementById("men3").classList.remove('acti');
+			};
+			if(document.getElementById("men4").classList.contains('acti')){
+				document.getElementById("men4").classList.remove('acti');
+			};
+			if(document.getElementById("men5").classList.contains('acti')){
+				document.getElementById("men5").classList.remove('acti');
+			};
+			document.getElementById("men2").classList.add('acti');
+		}
+		ck.ponerLink3 = function(){
+			if(document.getElementById("men1").classList.contains('acti')){
+				document.getElementById("men1").classList.remove('acti');
+			};
+			if(document.getElementById("men2").classList.contains('acti')){
+				document.getElementById("men2").classList.remove('acti');
+			};
+			if(document.getElementById("men0").classList.contains('acti')){
+				document.getElementById("men0").classList.remove('acti');
+			};
+			if(document.getElementById("men4").classList.contains('acti')){
+				document.getElementById("men4").classList.remove('acti');
+			};
+			if(document.getElementById("men5").classList.contains('acti')){
+				document.getElementById("men5").classList.remove('acti');
+			};
+			document.getElementById("men3").classList.add('acti');
+		}
+		ck.ponerLink4 = function(){
+			if(document.getElementById("men1").classList.contains('acti')){
+				document.getElementById("men1").classList.remove('acti');
+			};
+			if(document.getElementById("men2").classList.contains('acti')){
+				document.getElementById("men2").classList.remove('acti');
+			};
+			if(document.getElementById("men3").classList.contains('acti')){
+				document.getElementById("men3").classList.remove('acti');
+			};
+			if(document.getElementById("men0").classList.contains('acti')){
+				document.getElementById("men0").classList.remove('acti');
+			};
+			if(document.getElementById("men5").classList.contains('acti')){
+				document.getElementById("men5").classList.remove('acti');
+			};
+			document.getElementById("men4").classList.add('acti');
+		}
+		ck.ponerLink5 = function(){
+			if(document.getElementById("men1").classList.contains('acti')){
+				document.getElementById("men1").classList.remove('acti');
+			};
+			if(document.getElementById("men2").classList.contains('acti')){
+				document.getElementById("men2").classList.remove('acti');
+			};
+			if(document.getElementById("men3").classList.contains('acti')){
+				document.getElementById("men3").classList.remove('acti');
+			};
+			if(document.getElementById("men4").classList.contains('acti')){
+				document.getElementById("men4").classList.remove('acti');
+			};
+			if(document.getElementById("men0").classList.contains('acti')){
+				document.getElementById("men0").classList.remove('acti');
+			};
+			document.getElementById("men5").classList.add('acti');
+		}
 
 	}]);
