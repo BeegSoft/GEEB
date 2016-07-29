@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('app', ['firebase', 'ngRoute'])
+var app = angular.module('app', ['firebase', 'ngRoute', 'ngMaterial'])
 .config(function ($routeProvider) {
 		// Aqui agreguen todas las vistas que tendra la pagina
 		$routeProvider
@@ -76,22 +76,39 @@ app.controller('materiaController',['$firebaseArray',
 
 //Aqui añadimos las materias existentes
 app.controller('agregarMateriaController', ['$firebaseArray',
-	function($firebaseArray){
+	function($firebaseArray, $mdDialog, $mdMedia){
 		var vm = this;
 		var ref = new Firebase('https://geeb-e2f11.firebaseio.com/Materias/');
 		vm.Materias = $firebaseArray(ref);
-		
+		vm.bol = false;
 		vm.anadirMateria = function(){
 			for (var i = 0; i < vm.Materias.length; i++) {
-				if(vm.Materias[i] === vm.materia){
-					alert("Ya existe esta materia!");
-				}
+				if(vm.Materias[i].materia === vm.materia){
+					vm.bol = true;
+				};
 			};
-			vm.Materias.$add({
-				materia: vm.materia
-			});	
+				
+			if(vm.bol === false){
+				vm.Materias.$add({
+					materia: vm.materia
+				});
+			};
 			vm.materia = '';
+		};
 
+		vm.alert = function(ev){
+			if(vm.bol === false){
+				$mdDialog.show(
+		      	$mdDialog.alert()
+			        .parent(angular.element(document.querySelector('#popupContainer')))
+			        .clickOutsideToClose(true)
+			        .title('This is an alert title')
+			        .textContent('You can specify some description text in here.')
+			        .ariaLabel('Alert Dialog Demo')
+			        .ok('Got it!')
+			        .targetEvent(ev)
+	    		);
+			};
 		};
 	}]);
 //Fin de agregar materias existentes

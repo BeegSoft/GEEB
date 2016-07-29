@@ -43,7 +43,7 @@
 				<legend>Agregar Materias</legend>
 					<label for="Name">Nombre de la materia</label>
 					<input type="text" placeholder="Nombre" class="form-control" ng-model="vm.materia" required>
-					<input type="submit" value="Guardar" class="btn btn-primary boton" style="margin-top: 15px">
+					<input type="submit" value="Guardar" class="btn btn-primary boton" style="margin-top: 15px" ng-click="vm.alert($event)">
 			</fieldset>	  		  	
 		</form>	
   	</div>

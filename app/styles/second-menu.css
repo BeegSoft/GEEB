@@ -80,7 +80,7 @@
  
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #727272;
+    color: #1976D2;
     background: rgba(255,255,255,0.2);
     border-left: red 2px solid;
 }
