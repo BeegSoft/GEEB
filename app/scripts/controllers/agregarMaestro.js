@@ -60,10 +60,11 @@ app.controller('materiaController',['$firebaseArray',
 		var child = ref.child("TodosMaestros");
 		var moMaestros = $firebaseArray(child);
 		vm.mostrarNombres = moMaestros;
-
+		vm.comentarios= "Materias";
 		vm.agregarMateria = function(){
 			var maestroEscogido = ref.child(vm.maestro);
-			var materias = $firebaseArray(maestroEscogido);
+			var coment = maestroEscogido.child(vm.comentarios);
+			var materias = $firebaseArray(coment);
 			vm.Materias = materias;
 
 			vm.Materias.$add({
@@ -85,6 +86,7 @@ app.controller('agregarMateriaController', ['$firebaseArray',
 			for (var i = 0; i < vm.Materias.length; i++) {
 				if(vm.Materias[i].materia === vm.materia){
 					vm.bol = true;
+					alert("Ya existe esa materia!");
 				};
 			};
 				

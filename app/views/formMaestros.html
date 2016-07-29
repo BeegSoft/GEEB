@@ -18,7 +18,7 @@
 						<label for="maestro">Maestro</label>
 						<select class="form-control" name="Materias" ng-model="vm.maestro" required>
 							<option value="" disabled>Selecciona un maestro</option>
-							<option value="{{nombr.nombre}}" ng-repeat="nombr in vm.mostrarNombres">{{nombr.nombre}}</option>
+							<option value="{{nombr.nombre}}" ng-repeat="nombr in vm.mostrarNombres" ng-show="vm.mostrarNombres">{{nombr.nombre}}</option>
 						</select>
 						<br>
 						<br>
