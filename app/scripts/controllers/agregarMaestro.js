@@ -7,46 +7,96 @@ var app = angular.module('app', ['firebase', 'ngRoute'])
 		.when('/agregarMaestro',{
 			templateUrl: 'views/formMaestros.html',
 			controller: 'agregarMaestroController',
-			controllerAs: 'am'
+			controllerAs: 'vm'
+		})
+		.when('/agregarMateria',{
+			templateUrl: 'views/formMaterias.html',
+			controller: 'agregarMateriaController',
+			controllerAs: 'vm'
 		});
 	}); 
 
-//Factory para obtener el array y agregar a los maestros en firebase
-app.factory('agregarMaestro',['$firebaseArray',
+//Inicio del controlador para agregar nombre de los profesores
+app.controller('agregarMaestroController', ['$firebaseArray',
 	function($firebaseArray){
+		var vm = this;
 		var ref = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/');
-		var re = ref.child('pepino/')
-		return $firebaseArray(ref);
-	}]);
 
-app.factory('nombres',['$firebaseArray',
-	function($firebaseArray){
-		var ref = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros');
-		return $firebaseArray(ref);
-	}]);
+		vm.anadirMaestro = function(){
+			var ja = ref.child(vm.nombreMaestro);
 
-app.controller('agregarMaestroController', ['agregarMaestro','nombres',
-	function(agregarMaestro, nombres){
-		var am = this;
-
-		am.Maestros = agregarMaestro;
-		am.mostrarNombres = nombres;
-		am.select = 'Rodriguez';
-
-		am.anadirMaestro = function(){
-			am.Maestros.$add({
-				nombre: am.nombreMaestro
-			});
-			am.nombreMaestro = '';
-		};
-
+			//Agregamos nombres de los maestros
+			var agregar = $firebaseArray(ja);
+			vm.Maestros = agregar;
 		
-	}]);
-app.controller('agregarMateriaController',['$firebaseArray',
-	function($firebaseArray){
-		var ama = this;
+			vm.Maestros.$add({
+				nombre: vm.nombreMaestro
+			});
 
+			//Aqui agregamos maestros a otro Array para de ahi sacar los nombres
+			var ja2 = ref.child("TodosMaestros");
+			var agregar2 = $firebaseArray(ja2);
+			vm.Maestros2 = agregar2;
+			vm.Maestros2.$add({
+				nombre: vm.nombreMaestro
+			});
+			vm.nombreMaestro = '';
+
+		};
 	}]);
+//Fin del controlador de agregar nombres de profesores
+
+
+//Aqui agregamos materias a los profesores
+app.controller('materiaController',['$firebaseArray',
+	function($firebaseArray){
+		var vm = this;
+		var ref = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/');
+		var refMa = new Firebase('https://geeb-e2f11.firebaseio.com/Materias/');
+		var mostrarMa = $firebaseArray(refMa);
+
+		vm.moMateria = mostrarMa;
+
+		var child = ref.child("TodosMaestros");
+		var moMaestros = $firebaseArray(child);
+		vm.mostrarNombres = moMaestros;
+
+		vm.agregarMateria = function(){
+			var maestroEscogido = ref.child(vm.maestro);
+			var materias = $firebaseArray(maestroEscogido);
+			vm.Materias = materias;
+
+			vm.Materias.$add({
+				materia: vm.materia
+			});
+			vm.materia = '';
+		};
+	}]);
+//Fin de agregar materia a los profesores
+
+//Aqui añadimos las materias existentes
+app.controller('agregarMateriaController', ['$firebaseArray',
+	function($firebaseArray){
+		var vm = this;
+		var ref = new Firebase('https://geeb-e2f11.firebaseio.com/Materias/');
+		vm.Materias = $firebaseArray(ref);
+		
+		vm.anadirMateria = function(){
+			for (var i = 0; i < vm.Materias.length; i++) {
+				if(vm.Materias[i] === vm.materia){
+					alert("Ya existe esta materia!");
+				}
+			};
+			vm.Materias.$add({
+				materia: vm.materia
+			});	
+			vm.materia = '';
+
+		};
+	}]);
+//Fin de agregar materias existentes
+
+//Aqui para controlar el menu y sus focus
 app.controller('menusController', [
 	function(){
 		var ck = this;
@@ -163,3 +213,4 @@ app.controller('menusController', [
 		}
 
 	}]);
+//Fin de modificar el menu
