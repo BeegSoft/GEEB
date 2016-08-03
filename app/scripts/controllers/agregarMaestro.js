@@ -18,6 +18,11 @@ var app = angular.module('app', ['firebase', 'ngRoute', 'ngMaterial'])
 			templateUrl: 'views/perfil-maestro.html',
 			controller: 'agregarMateriaController',
 			controllerAs: 'vm'
+		})
+		.when('/buscarMaterias',{
+			templateUrl: 'views/Card.html',
+			controller: 'agregarMateriaController',
+			controllerAs: 'vm'
 		});
 	}); 
 
