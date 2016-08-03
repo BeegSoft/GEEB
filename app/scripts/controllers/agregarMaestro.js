@@ -22,26 +22,44 @@ app.controller('agregarMaestroController', ['$firebaseArray',
 		var vm = this;
 		var ref = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/');
 
+		//conexion para saber si existe el mismo maestro
+		var refBuscar = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/TodosMaestros/');
+		vm.bol = false;
+		var buscarTodos = $firebaseArray(refBuscar);
+		vm.buscarMaestro = buscarTodos;
+
+
 		vm.anadirMaestro = function(){
-			var ja = ref.child(vm.nombreMaestro);
+			
+			//Buscamos si ya existe el maestro
+			for (var i = 0; i < vm.buscarMaestro.length; i++) {
+				if(vm.buscarMaestro[i].nombre === vm.nombreMaestro){
+					vm.bol = true;
+					alert("Ya esta agregado ese Maestro!");
+				};
+			};
 
-			//Agregamos nombres de los maestros
-			var agregar = $firebaseArray(ja);
-			vm.Maestros = agregar;
-		
-			vm.Maestros.$add({
-				nombre: vm.nombreMaestro
-			});
+			if(vm.bol === false){
+				var ja = ref.child(vm.nombreMaestro);
 
-			//Aqui agregamos maestros a otro Array para de ahi sacar los nombres
-			var ja2 = ref.child("TodosMaestros");
-			var agregar2 = $firebaseArray(ja2);
-			vm.Maestros2 = agregar2;
-			vm.Maestros2.$add({
-				nombre: vm.nombreMaestro
-			});
-			vm.nombreMaestro = '';
+				//Agregamos nombres de los maestros
+				var agregar = $firebaseArray(ja);
+				vm.Maestros = agregar;
 
+				vm.Maestros.$add({
+					nombre: vm.nombreMaestro
+				});
+
+				//Aqui agregamos maestros a otro Array para de ahi sacar los nombres
+				var ja2 = ref.child("TodosMaestros");
+				var agregar2 = $firebaseArray(ja2);
+				vm.Maestros2 = agregar2;
+				vm.Maestros2.$add({
+					nombre: vm.nombreMaestro
+				});
+				vm.nombreMaestro = '';
+			};
+			vm.bol = false;
 		};
 	}]);
 //Fin del controlador de agregar nombres de profesores
@@ -61,16 +79,31 @@ app.controller('materiaController',['$firebaseArray',
 		var moMaestros = $firebaseArray(child);
 		vm.mostrarNombres = moMaestros;
 		vm.comentarios= "Materias";
+		vm.bol = false;
+		var refCompara = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/MARTINEZ%20CHAVEZ%20GABRIEL/Materias/');
+			var conex = $firebaseArray(refCompara);
 		vm.agregarMateria = function(){
 			var maestroEscogido = ref.child(vm.maestro);
 			var coment = maestroEscogido.child(vm.comentarios);
 			var materias = $firebaseArray(coment);
 			vm.Materias = materias;
 
-			vm.Materias.$add({
-				materia: vm.materia
-			});
-			vm.materia = '';
+			
+			vm.Materias2 = conex;
+			//Buscamos si ya tiene la materia ese maestro
+			for (var i = 0; i < vm.Materias2.length; i++) {
+				if(vm.Materias2[i].materia === vm.materia){
+					vm.bol = true;
+					alert("Este maestro ya tiene esa materia!");
+				};
+			};
+			if(vm.bol === false){
+				vm.Materias.$add({
+					materia: vm.materia
+				});
+				vm.materia = '';
+			};
+			vm.bol = false;
 		};
 	}]);
 //Fin de agregar materia a los profesores
@@ -96,6 +129,7 @@ app.controller('agregarMateriaController', ['$firebaseArray',
 				});
 			};
 			vm.materia = '';
+			vm.bol = false;
 		};
 
 		vm.alert = function(ev){
@@ -233,3 +267,14 @@ app.controller('menusController', [
 
 	}]);
 //Fin de modificar el menu
+
+//Busqueda de materias
+app.controller('busqueda_materias', ['$firebaseArray',
+	function($firebaseArray){
+		var vm = this;
+		var ref = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/');
+		vm.buscarMaterias = $firebaseArray(ref);
+
+
+	}]);
+//Fin de busqueda por materias
