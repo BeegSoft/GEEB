@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pagina3</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	<div class="row">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+		    <div class="navbar-header" style="padding-left:10px">
+		      <a class="navbar-brand" href="index.html">Ziix</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li><a href="index.html">Inicio</a></li>
+		      <li><a href="pagina2.html">Detalles</a></li>
+		      <li class="active"><a href="pagina3.html">Contacto</a></li> 
+		    </ul>
+		  </div>
+		</nav>
+	</div>
+	<p><center><h3>Perfil del Maestro</h3></center></p>
+	<hr>
+	<div class="row">
+	  	<div class="col-xs-6 col-md-4">	  			  	
+        	<center><img src="..." alt="..." class="img-circle"></center>
+	  	</div>
+
+		<div class="col-xs-6 col-md-4">
+			<div class="col-xs-6">
+				<label for="Name">Nombre del Maestro</label>
+				<input type="text" placeholder="Nombre" class="form-control">
+				<br>			
+	            <label for="Name">Puntuacion</label>
+	            <input type="text" placeholder="Puntuacion" class="form-control">
+	            <br>            	            
+            </div>            
+		</div>
+
+		<div class="col-xs-6 col-md-4">
+
+		</div>  
+	</div>
+	<hr>
+
+	<!--
+	Parte donde apareceran los comentarios
+	-->
+	<div class="container-fluid">
+		<form >
+			<table class="table table-bordered">
+				<caption><center>Comentarios</center></caption>
+				<tr>
+					<th><img src="..." alt="..." class="img-circle"> Usuario</th>
+				</tr>
+				<tr>
+					<th>Comentario: </th>
+				</tr>												
+			</table>	  		  
+		</form>
+	</div>
+	<!--
+	parte donde se pondran los comentarios 
+	-->
+
+	<hr>
+
+	<div class="container-fluid">
+		  <div class="col-xs-12 col-md-8">		  						
+				<textarea cols="30" rows="5" class="form-control"placeholder="Escriba su mensaje aqui..." style="resize:none; padding:5px;"></textarea>
+				<br>									
+		  </div>
+		  <div class="col-xs-6 col-md-4">
+		  	<input type="submit" value="Enviar" class="btn btn-primary">
+		  </div>
+	</div>
+</body>
+</html>	
