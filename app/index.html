@@ -7,8 +7,10 @@
 	<link rel="stylesheet" href="styles/css/font-awesome.min.css">
 	<link rel="stylesheet" href="styles/second-menu.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- Angular Material CSS now available via Google CDN; version 1.0.7 used here -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
 </head>
-<body>
+<body> 
 	
 
 	<!-- <nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
@@ -57,11 +59,11 @@
     </nav>
     <div id="wrapper">
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
+        <div id="sidebar-wrapper"  ng-controller="menusController as ck">
             <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
  				<br>
-                <li class="acti">
-                    <a href="#" class="link"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search fa-stack-1x"></i></i></span>Buscar Maestros</a>
+                <li class="">
+                    <a href="#" class="" id="men0" ng-click="ck.ponerLink()"><span class="fa-stack fa-lg pull-left"><i class="fa fa-search fa-stack-1x"></i></i></span>Buscar Maestros</a>
                 </li>
                 <br> <br>
                 <hr style="padding: 0px; margin: 0px;">
@@ -70,23 +72,23 @@
                 	<span class="fa-stack fa-lg pull-left"></span><span style="color: #212121;">Busqueda por:</span>
                 </li>
                 <li>
-                    <a href="#"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-list-ol fa-stack-1x" aria-hidden="true"></i></span>Semestres</a>
+                    <a href="#" class="" id="men1" ng-click="ck.ponerLink1()"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-list-ol fa-stack-1x" aria-hidden="true"></i></span>Semestres</a>
                    
                 
                 </li>
                 <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-book fa-stack-1x" aria-hidden="true"></i></span>Materias</a>
+                    <a href="#" id="men2" ng-click="ck.ponerLink2()"><span class="fa-stack fa-lg pull-left"><i class="fa fa-book fa-stack-1x" aria-hidden="true"></i></span>Materias</a>
 
                     
                 </li>
                 <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-table fa-stack-1x" aria-hidden="true"></i></span>Pre-Horarios</a>
+                    <a href="#" id="men3" ng-click="ck.ponerLink3()"><span class="fa-stack fa-lg pull-left"><i class="fa fa-table fa-stack-1x" aria-hidden="true"></i></span>Pre-Horarios</a>
                     
                 </li>
                 <li>
-                	<a href="#/agregarMaestro"><span class="fa-stack fa-lg pull-left"><i class="fa fa-table fa-stack-1x" aria-hidden="true"></i></span>Agregar Maestros</a>                	
+                	<a href="#/agregarMaestro" id="men4" ng-click="ck.ponerLink4()"><span class="fa-stack fa-lg pull-left"><i class="fa fa-table fa-stack-1x" aria-hidden="true"></i></span>Agregar Maestros</a>                	
                 	
-                	<a href="#/agregarMaestro"><span class="fa-stack fa-lg pull-left"><i class="fa fa-table fa-stack-1x" aria-hidden="true"></i></span>Maestros</a>                	
+                	<a href="#/perfilMaestro" id="men5" ng-click="ck.ponerLink5()"><span class="fa-stack fa-lg pull-left"><i class="fa fa-table fa-stack-1x" aria-hidden="true"></i></span>Perfil de maestros</a>                	
                 	<hr style="padding: 0px; margin: 0px">
                 </li>
                 
@@ -109,7 +111,14 @@
 
 	<!-- AngularJs-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
 
+
+    <!-- Angular Material Javascript now available via Google CDN; version 1.0.7 used here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.js"></script>
+    
 	<!-- jQuery-->
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 
@@ -122,13 +131,12 @@
 	<!-- Angular route -->
 	<script src="bower_components/angular-route/angular-route.js"></script>
 	
-	<!-- Scroll Glue-->
-	<script src="bower_components/ng-scroll-glue/dist/ng-scroll-glue.js"></script>
+	<!-- Scroll Glue
+	<script src="bower_components/ng-scroll-glue/dist/ng-scroll-glue.js"></script>-->
 	
 	<!-- Script Principal -->
 	<script src="scripts/app.js"></script>
 
-	<script src="scripts/controllers/scriptMenu.js"></script>
 
 	<script src="scripts/controllers/secondMenu.js"></script>
 

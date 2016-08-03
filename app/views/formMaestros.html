@@ -1,60 +1,52 @@
 <div class="container-fluid">
-  <div class="col-xs-6">
-  	<form ng-submit="am.anadirMaestro()">
-		<fieldset>
-			<legend>Agregar Maestro</legend>
-			<div class="container">
-				<div class="row">				
-				</div>
-				<div class="row"> 
-					<div class="col-xs-3">
-						<label for="FullName">Imagen de Perfil</label>
-						<br>
-						<br>
+  	<div class="col-xs-3">
+  		<form ng-submit="vm.anadirMaestro()">
+			<fieldset>
+				<legend>Agregar Maestro</legend>
 						<label for="Name">Nombre del Maestro</label>
-						<input type="text" placeholder="Mombre" class="form-control" ng-model="am.nombreMaestro">
+						<input type="text" placeholder="Nombre" class="form-control" ng-model="vm.nombreMaestro"  required>
 						<br>
-						<label for="Correo">Correo Electronico</label>
-						<input type="text" placeholder="Correo" class="form-control">
-						<br>						
-						<input type="submit" value="Guardar" class="btn btn-primary">
-					</div>
-				</div>
-			</div>
-		</fieldset>	  		  	
-	</form>	
-  </div>
-  <div class="col-xs-6">
-  	<form>
-		<fieldset>
-			<legend>Añadir Materia</legend>
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-3">						
-						<label for="maestro">Maestro</label>	
-						<select class="form-control" name="Materias">
-							<option value="" ng-repeat="nombr in am.mostrarNombres" ng-show="nombr.nombre">{{nombr.nombre}}</option>
+						<input type="submit" value="Guardar" class="btn btn-primary boton">
+			</fieldset>	  		  	
+		</form>	
+  	</div>
+  	<div class="col-xs-2"></div>
+  	<div class="col-xs-3" ng-controller="materiaController as vm">
+  		<form ng-submit="vm.agregarMateria()">
+			<fieldset>
+				<legend>Añadir Materia</legend>
+						<label for="maestro">Maestro</label>
+						<select class="form-control" name="Materias" ng-model="vm.maestro" required>
+							<option value="" disabled>Selecciona un maestro</option>
+							<option value="{{nombr.nombre}}" ng-repeat="nombr in vm.mostrarNombres" ng-show="vm.mostrarNombres">{{nombr.nombre}}</option>
 						</select>
 						<br>
 						<br>
 						<label for="materias">Materias</label>						
-						<select class="form-control" name="Materias">
-							<option value="">{{am.select}}</option>
-							<option value="2">calculo</option>
-							<option value="3">estructura</option>
-							<option value="4">diseño</option>
-							<option value="5">ecuaciones</option>
+						<select class="form-control" name="Materias" ng-model="vm.materia" required>
+							<option value="" disabled>Selecciona una materia</option>
+							<option value="{{materia.materia}}" ng-repeat="materia in vm.moMateria">{{materia.materia}}</option>
 						</select>
 						<br>
 						<br>
-						<input type="submit" class="btn btn-primary">
-					</div>
-				</div>
-			</div>
-		</fieldset>	  		  	
-	</form>
+						<input type="submit" class="btn btn-primary boton">
+			</fieldset>	  		  	
+		</form>
 
-  </div>
+  	</div>
+  	
+</div>
+<div class="container-fluid" ng-controller="agregarMateriaController as vm">
+  	<div class="col-lg-2 col-xs-6">
+  		<form ng-submit="vm.anadirMateria()">
+			<fieldset>
+				<legend>Agregar Materias</legend>
+					<label for="Name">Nombre de la materia</label>
+					<input type="text" placeholder="Nombre" class="form-control" ng-model="vm.materia" required>
+					<input type="submit" value="Guardar" class="btn btn-primary boton" style="margin-top: 15px">
+			</fieldset>	  		  	
+		</form>	
+  	</div>
 </div>
 <hr>		
 

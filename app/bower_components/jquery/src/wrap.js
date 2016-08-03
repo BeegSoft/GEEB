@@ -5,10 +5,16 @@ define( [
 	"./traversing" // parent, contents
 ], function( jQuery ) {
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 jQuery.fn.extend( {
 	wrapAll: function( html ) {
 		var wrap;
 
+<<<<<<< HEAD
 		if ( jQuery.isFunction( html ) ) {
 			return this.each( function( i ) {
 				jQuery( this ).wrapAll( html.call( this, i ) );
@@ -16,6 +22,12 @@ jQuery.fn.extend( {
 		}
 
 		if ( this[ 0 ] ) {
+=======
+		if ( this[ 0 ] ) {
+			if ( jQuery.isFunction( html ) ) {
+				html = html.call( this[ 0 ] );
+			}
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 
 			// The elements to wrap the target around
 			wrap = jQuery( html, this[ 0 ].ownerDocument ).eq( 0 ).clone( true );
@@ -66,12 +78,20 @@ jQuery.fn.extend( {
 		} );
 	},
 
+<<<<<<< HEAD
 	unwrap: function() {
 		return this.parent().each( function() {
 			if ( !jQuery.nodeName( this, "body" ) ) {
 				jQuery( this ).replaceWith( this.childNodes );
 			}
 		} ).end();
+=======
+	unwrap: function( selector ) {
+		this.parent( selector ).not( "body" ).each( function() {
+			jQuery( this ).replaceWith( this.childNodes );
+		} );
+		return this;
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 	}
 } );
 

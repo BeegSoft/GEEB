@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+/* ExcludeStart */
+
+// This file is included in a different way from all the others
+// so the "use strict" pragma is not needed.
+/* eslint strict: "off" */
+
+/* ExcludeEnd */
+
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 var
 
 	// Map over jQuery in case of overwrite

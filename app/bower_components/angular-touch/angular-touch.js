@@ -1,5 +1,9 @@
 /**
+<<<<<<< HEAD
  * @license AngularJS v1.5.8
+=======
+ * @license AngularJS v1.5.7
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
  * (c) 2010-2016 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -167,12 +171,15 @@ ngTouch.factory('$swipe', [function() {
       move: 'touchmove',
       end: 'touchend',
       cancel: 'touchcancel'
+<<<<<<< HEAD
     },
     'pointer': {
       start: 'pointerdown',
       move: 'pointermove',
       end: 'pointerup',
       cancel: 'pointercancel'
+=======
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
     }
   };
 
@@ -207,15 +214,25 @@ ngTouch.factory('$swipe', [function() {
      * The main method of `$swipe`. It takes an element to be watched for swipe motions, and an
      * object containing event handlers.
      * The pointer types that should be used can be specified via the optional
+<<<<<<< HEAD
      * third argument, which is an array of strings `'mouse'`, `'touch'` and `'pointer'`. By default,
      * `$swipe` will listen for `mouse`, `touch` and `pointer` events.
+=======
+     * third argument, which is an array of strings `'mouse'` and `'touch'`. By default,
+     * `$swipe` will listen for `mouse` and `touch` events.
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
      *
      * The four events are `start`, `move`, `end`, and `cancel`. `start`, `move`, and `end`
      * receive as a parameter a coordinates object of the form `{ x: 150, y: 310 }` and the raw
      * `event`. `cancel` receives the raw `event` as its single parameter.
      *
+<<<<<<< HEAD
      * `start` is called on either `mousedown`, `touchstart` or `pointerdown`. After this event, `$swipe` is
      * watching for `touchmove`, `mousemove` or `pointermove` events. These events are ignored until the total
+=======
+     * `start` is called on either `mousedown` or `touchstart`. After this event, `$swipe` is
+     * watching for `touchmove` or `mousemove` events. These events are ignored until the total
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
      * distance moved in either dimension exceeds a small threshold.
      *
      * Once this threshold is exceeded, either the horizontal or vertical delta is greater.
@@ -223,12 +240,21 @@ ngTouch.factory('$swipe', [function() {
      * - If the vertical distance is greater, this is a scroll, and we let the browser take over.
      *   A `cancel` event is sent.
      *
+<<<<<<< HEAD
      * `move` is called on `mousemove`, `touchmove` and `pointermove` after the above logic has determined that
      * a swipe is in progress.
      *
      * `end` is called when a swipe is successfully completed with a `touchend`, `mouseup` or `pointerup`.
      *
      * `cancel` is called either on a `touchcancel` or `pointercancel`  from the browser, or when we begin scrolling
+=======
+     * `move` is called on `mousemove` and `touchmove` after the above logic has determined that
+     * a swipe is in progress.
+     *
+     * `end` is called when a swipe is successfully completed with a `touchend` or `mouseup`.
+     *
+     * `cancel` is called either on a `touchcancel` from the browser, or when we begin scrolling
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
      * as described above.
      *
      */
@@ -242,7 +268,11 @@ ngTouch.factory('$swipe', [function() {
       // Whether a swipe is active.
       var active = false;
 
+<<<<<<< HEAD
       pointerTypes = pointerTypes || ['mouse', 'touch', 'pointer'];
+=======
+      pointerTypes = pointerTypes || ['mouse', 'touch'];
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
       element.on(getEvents(pointerTypes, 'start'), function(event) {
         startCoords = getCoordinates(event);
         active = true;

@@ -1,5 +1,9 @@
 /**
+<<<<<<< HEAD
  * @license AngularJS v1.5.8
+=======
+ * @license AngularJS v1.5.7
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
  * (c) 2010-2016 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -119,9 +123,14 @@ function shallowClearAndCopy(src, dst) {
  *   can escape it with `/\.`.
  *
  * @param {Object=} paramDefaults Default values for `url` parameters. These can be overridden in
+<<<<<<< HEAD
  *   `actions` methods. If a parameter value is a function, it will be called every time
  *   a param value needs to be obtained for a request (unless the param was overridden). The function
  *   will be passed the current data value as an argument.
+=======
+ *   `actions` methods. If a parameter value is a function, it will be executed every time
+ *   when a param value needs to be obtained for a request (unless the param was overridden).
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
  *
  *   Each key value in the parameter object is first bound to url template if present and then any
  *   excess keys are appended to the url search query after the `?`.
@@ -129,6 +138,7 @@ function shallowClearAndCopy(src, dst) {
  *   Given a template `/path/:verb` and parameter `{verb:'greet', salutation:'Hello'}` results in
  *   URL `/path/greet?salutation=Hello`.
  *
+<<<<<<< HEAD
  *   If the parameter value is prefixed with `@`, then the value for that parameter will be
  *   extracted from the corresponding property on the `data` object (provided when calling a
  *   "non-GET" action method).
@@ -136,6 +146,12 @@ function shallowClearAndCopy(src, dst) {
  *   `someParam` will be `data.someProp`.
  *   Note that the parameter will be ignored, when calling a "GET" action method (i.e. an action
  *   method that does not accept a request body)
+=======
+ *   If the parameter value is prefixed with `@` then the value for that parameter will be extracted
+ *   from the corresponding property on the `data` object (provided when calling an action method).
+ *   For example, if the `defaultParam` object is `{someParam: '@someProp'}` then the value of
+ *   `someParam` will be `data.someProp`.
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
  *
  * @param {Object.<Object>=} actions Hash with declaration of custom actions that should extend
  *   the default set of resource actions. The declaration should be created in the format of {@link
@@ -152,9 +168,14 @@ function shallowClearAndCopy(src, dst) {
  *   - **`method`** – {string} – Case insensitive HTTP method (e.g. `GET`, `POST`, `PUT`,
  *     `DELETE`, `JSONP`, etc).
  *   - **`params`** – {Object=} – Optional set of pre-bound parameters for this action. If any of
+<<<<<<< HEAD
  *     the parameter value is a function, it will be called every time when a param value needs to
  *     be obtained for a request (unless the param was overridden). The function will be passed the
  *     current data value as an argument.
+=======
+ *     the parameter value is a function, it will be executed every time when a param value needs to
+ *     be obtained for a request (unless the param was overridden).
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
  *   - **`url`** – {string} – action specific `url` override. The url templating is supported just
  *     like for the resource-level urls.
  *   - **`isArray`** – {boolean=} – If true then the returned object for this action is an array,
@@ -651,7 +672,11 @@ angular.module('ngResource', ['ng']).
           var ids = {};
           actionParams = extend({}, paramDefaults, actionParams);
           forEach(actionParams, function(value, key) {
+<<<<<<< HEAD
             if (isFunction(value)) { value = value(data); }
+=======
+            if (isFunction(value)) { value = value(); }
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
             ids[key] = value && value.charAt && value.charAt(0) == '@' ?
               lookupDottedPath(data, value.substr(1)) : value;
           });
