@@ -12,6 +12,18 @@
     "library"
   ],
   "homepage": "https://github.com/jquery/jquery-dist",
+<<<<<<< HEAD
+  "version": "2.2.4",
+  "_release": "2.2.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.2.4",
+    "commit": "c0185ab7c75aab88762c5aae780b9d83b80eda72"
+  },
+  "_source": "https://github.com/jquery/jquery-dist.git",
+  "_target": "1.9.1 - 2",
+  "_originalSource": "jquery"
+=======
   "version": "3.1.0",
   "_release": "3.1.0",
   "_resolution": {
@@ -23,4 +35,5 @@
   "_target": "^3.1.0",
   "_originalSource": "jquery",
   "_direct": true
+>>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 }

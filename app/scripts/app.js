@@ -35,6 +35,11 @@ angular
       controller: 'agregarMaestroController',
       controllerAs: 'am'
       })
+        .when('/', {
+        templateUrl: 'views/Card.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
       .otherwise({
         redirectTo: '/'
       });
