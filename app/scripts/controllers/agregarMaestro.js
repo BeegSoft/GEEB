@@ -33,7 +33,52 @@ var app = angular.module('app', ['firebase', 'ngRoute', 'ngMaterial','lumx'])
 			templateUrl: 'views/PreHorarios/sistemas.html',
 			controller: 'preHorarioController',
 			controllerAs: 'vm'
-		});
+		})
+		.when('/electrica',{
+			templateUrl: 'views/PreHorarios/electrica.html',
+			controller: 'preHorarioController',
+			controllerAs: 'vm'
+		})
+		.when('/electronica',{
+			templateUrl: 'views/PreHorarios/electronica.html',
+			controller: 'preHorarioController',
+			controllerAs: 'vm'
+		})
+		.when('/mecanica',{
+			templateUrl: 'views/PreHorarios/mecanica.html',
+			controller: 'preHorarioController',
+			controllerAs: 'vm'
+		})
+		.when('/mecatronica',{
+			templateUrl: 'views/PreHorarios/mecatronica.html',
+			controller: 'preHorarioController',
+			controllerAs: 'vm'
+		})
+		.when('/administracion',{
+			templateUrl: 'views/PreHorarios/administracion.html',
+			controller: 'preHorarioController',
+			controllerAs: 'vm'
+		})
+		.when('/gestion',{
+			templateUrl: 'views/PreHorarios/gestion.html',
+			controller: 'preHorarioController',
+			controllerAs: 'vm'
+		})
+		.when('/informatica',{
+			templateUrl: 'views/PreHorarios/informatica.html',
+			controller: 'preHorarioController',
+			controllerAs: 'vm'
+		})
+		.when('/industrial',{
+			templateUrl: 'views/PreHorarios/industrial.html',
+			controller: 'preHorarioController',
+			controllerAs: 'vm'
+		})
+		.when('/biomedica',{
+			templateUrl: 'views/PreHorarios/biomedica.html',
+			controller: 'preHorarioController',
+			controllerAs: 'vm'
+		})
 	}); 
 
 //Inicio del controlador para agregar nombre de los profesores
