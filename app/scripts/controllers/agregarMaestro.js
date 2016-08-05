@@ -28,6 +28,11 @@ var app = angular.module('app', ['firebase', 'ngRoute', 'ngMaterial','lumx'])
 			templateUrl: 'views/Carreras.html',
 			controller: 'agregarMateriaController',
 			controllerAs: 'vm'
+		})
+		.when('/sistemas',{
+			templateUrl: 'views/PreHorarios/sistemas.html',
+			controller: 'preHorarioController',
+			controllerAs: 'vm'
 		});
 	}); 
 

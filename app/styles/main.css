@@ -81,3 +81,11 @@ body {
     border-bottom: 0;
   }
 }
+
+.btn-semestres{
+  display: block; 
+  margin-bottom: 10px; 
+  height: 40px;
+  width: 60px;
+  font-weight: bold;
+}
