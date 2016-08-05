@@ -21,7 +21,7 @@ var app = angular.module('app', ['firebase', 'ngRoute', 'ngMaterial','lumx'])
 		})
 		.when('/buscarMaterias',{
 			templateUrl: 'views/Card.html',
-			controller: 'agregarMateriaController',
+			controller: 'materiaController',
 			controllerAs: 'vm'
 		})
 		.when('/carreras',{
