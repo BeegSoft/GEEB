@@ -23,6 +23,11 @@ var app = angular.module('app', ['firebase', 'ngRoute', 'ngMaterial'])
 			templateUrl: 'views/Card.html',
 			controller: 'agregarMateriaController',
 			controllerAs: 'vm'
+		})
+		.when('/carreras',{
+			templateUrl: 'views/Carreras.html',
+			controller: 'agregarMateriaController',
+			controllerAs: 'vm'
 		});
 	}); 
 
