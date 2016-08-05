@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('app', ['firebase', 'ngRoute', 'ngMaterial'])
+var app = angular.module('app', ['firebase', 'ngRoute', 'ngMaterial','lumx'])
 .config(function ($routeProvider) {
 		// Aqui agreguen todas las vistas que tendra la pagina
 		$routeProvider
