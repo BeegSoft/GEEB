@@ -4,10 +4,7 @@ define( [
 	"./traversing",
 	"./callbacks",
 	"./deferred",
-<<<<<<< HEAD
-=======
 	"./deferred/exceptionHook",
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 	"./core/ready",
 	"./data",
 	"./queue",
@@ -36,11 +33,8 @@ define( [
 	"./exports/amd"
 ], function( jQuery ) {
 
-<<<<<<< HEAD
-=======
 "use strict";
 
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 return ( window.jQuery = window.$ = jQuery );
 
 } );

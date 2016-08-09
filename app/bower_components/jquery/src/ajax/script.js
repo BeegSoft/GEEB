@@ -4,8 +4,6 @@ define( [
 	"../ajax"
 ], function( jQuery, document ) {
 
-<<<<<<< HEAD
-=======
 "use strict";
 
 // Prevent auto-execution of scripts when no explicit dataType was provided (See gh-2432)
@@ -15,7 +13,6 @@ jQuery.ajaxPrefilter( function( s ) {
 	}
 } );
 
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 // Install script dataType
 jQuery.ajaxSetup( {
 	accepts: {

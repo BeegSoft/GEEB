@@ -1,10 +1,7 @@
 define( function() {
 
-<<<<<<< HEAD
-=======
 "use strict";
 
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 function addGetHookIf( conditionFn, hookFn ) {
 
 	// Define the hook, we'll check on the first run if it's really needed.

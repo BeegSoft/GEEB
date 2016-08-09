@@ -4,11 +4,8 @@ define( [
 	"../core/init"
 ], function( jQuery, support ) {
 
-<<<<<<< HEAD
-=======
 "use strict";
 
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 var rreturn = /\r/g,
 	rspaces = /[\x20\t\r\n\f]+/g;
 
@@ -90,11 +87,7 @@ jQuery.extend( {
 				return val != null ?
 					val :
 
-<<<<<<< HEAD
-					// Support: IE10-11+
-=======
 					// Support: IE <=10 - 11 only
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 					// option.text throws exceptions (#14686, #14858)
 					// Strip and collapse whitespace
 					// https://html.spec.whatwg.org/#strip-and-collapse-whitespace
@@ -106,11 +99,7 @@ jQuery.extend( {
 				var value, option,
 					options = elem.options,
 					index = elem.selectedIndex,
-<<<<<<< HEAD
-					one = elem.type === "select-one" || index < 0,
-=======
 					one = elem.type === "select-one",
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 					values = one ? null : [],
 					max = one ? index + 1 : options.length,
 					i = index < 0 ?
@@ -121,20 +110,12 @@ jQuery.extend( {
 				for ( ; i < max; i++ ) {
 					option = options[ i ];
 
-<<<<<<< HEAD
-=======
 					// Support: IE <=9 only
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 					// IE8-9 doesn't update selected after form reset (#2551)
 					if ( ( option.selected || i === index ) &&
 
 							// Don't return options that are disabled or in a disabled optgroup
-<<<<<<< HEAD
-							( support.optDisabled ?
-								!option.disabled : option.getAttribute( "disabled" ) === null ) &&
-=======
 							!option.disabled &&
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 							( !option.parentNode.disabled ||
 								!jQuery.nodeName( option.parentNode, "optgroup" ) ) ) {
 
@@ -162,22 +143,16 @@ jQuery.extend( {
 
 				while ( i-- ) {
 					option = options[ i ];
-<<<<<<< HEAD
-=======
 
 					/* eslint-disable no-cond-assign */
 
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 					if ( option.selected =
 						jQuery.inArray( jQuery.valHooks.option.get( option ), values ) > -1
 					) {
 						optionSet = true;
 					}
-<<<<<<< HEAD
-=======
 
 					/* eslint-enable no-cond-assign */
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 				}
 
 				// Force browsers to behave consistently when non-matching value is set

@@ -1,9 +1,5 @@
 /**
-<<<<<<< HEAD
  * @license AngularJS v1.5.8
-=======
- * @license AngularJS v1.5.7
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
  * (c) 2010-2016 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -117,7 +113,6 @@ angular.mock.$Browser = function() {
    * @param {number=} number of milliseconds to flush. See {@link #defer.now}
    */
   self.defer.flush = function(delay) {
-<<<<<<< HEAD
     var nextTime;
 
     if (angular.isDefined(delay)) {
@@ -129,19 +124,10 @@ angular.mock.$Browser = function() {
         nextTime = self.deferredFns[self.deferredFns.length - 1].time;
       } else {
         // No delay passed, but there are no deferred tasks so flush - indicates an error!
-=======
-    if (angular.isDefined(delay)) {
-      self.defer.now += delay;
-    } else {
-      if (self.deferredFns.length) {
-        self.defer.now = self.deferredFns[self.deferredFns.length - 1].time;
-      } else {
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
         throw new Error('No deferred tasks to be flushed');
       }
     }
 
-<<<<<<< HEAD
     while (self.deferredFns.length && self.deferredFns[0].time <= nextTime) {
       // Increment the time and call the next deferred function
       self.defer.now = self.deferredFns[0].time;
@@ -150,11 +136,6 @@ angular.mock.$Browser = function() {
 
     // Ensure that the current time is correct
     self.defer.now = nextTime;
-=======
-    while (self.deferredFns.length && self.deferredFns[0].time <= self.defer.now) {
-      self.deferredFns.shift().fn();
-    }
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
   };
 
   self.$$baseHref = '/';
@@ -963,20 +944,10 @@ angular.mock.animate = angular.module('ngAnimateMock', ['ng'])
  * @name angular.mock.dump
  * @description
  *
-<<<<<<< HEAD
  * *NOTE*: This is not an injectable instance, just a globally available function.
  *
  * Method for serializing common angular objects (scope, elements, etc..) into strings.
  * It is useful for logging objects to the console when debugging.
-=======
- * *NOTE*: this is not an injectable instance, just a globally available function.
- *
- * Method for serializing common angular objects (scope, elements, etc..) into strings, useful for
- * debugging.
- *
- * This method is also available on window, where it can be used to display objects on debug
- * console.
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
  *
  * @param {*} object - any object to turn into string.
  * @return {string} a serialized string of the argument
@@ -2317,11 +2288,7 @@ angular.mock.$ComponentControllerProvider = ['$compileProvider', function($compi
  *  * [Google CDN](https://developers.google.com/speed/libraries/devguide#angularjs) e.g.
  *    `"//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-mocks.js"`
  *  * [NPM](https://www.npmjs.com/) e.g. `npm install angular-mocks@X.Y.Z`
-<<<<<<< HEAD
  *  * [Bower](http://bower.io) e.g. `bower install angular-mocks#X.Y.Z`
-=======
- *  * [Bower](http://bower.io) e.g. `bower install angular-mocks@X.Y.Z`
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
  *  * [code.angularjs.org](https://code.angularjs.org/) (discouraged for production use)  e.g.
  *    `"//code.angularjs.org/X.Y.Z/angular-mocks.js"`
  *
@@ -2970,11 +2937,7 @@ angular.mock.$RootScopeDecorator = ['$delegate', function($delegate) {
     angular.forEach(angular.callbacks, function(val, key) {
       delete angular.callbacks[key];
     });
-<<<<<<< HEAD
     angular.callbacks.$$counter = 0;
-=======
-    angular.callbacks.counter = 0;
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
   };
 
   (window.beforeEach || window.setup)(module.$$beforeEach);
@@ -3077,11 +3040,7 @@ angular.mock.$RootScopeDecorator = ['$delegate', function($delegate) {
       this.stack = e.stack + '\n' + errorForStack.stack;
     if (e.stackArray) this.stackArray = e.stackArray;
   };
-<<<<<<< HEAD
   ErrorAddingDeclarationLocationStack.prototype = Error.prototype;
-=======
-  ErrorAddingDeclarationLocationStack.prototype.toString = Error.prototype.toString;
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 
   window.inject = angular.mock.inject = function() {
     var blockFns = Array.prototype.slice.call(arguments, 0);

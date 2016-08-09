@@ -1,18 +1,11 @@
 define( function() {
 
-<<<<<<< HEAD
-// We have to close these tags to support XHTML (#13200)
-var wrapMap = {
-
-	// Support: IE9
-=======
 "use strict";
 
 // We have to close these tags to support XHTML (#13200)
 var wrapMap = {
 
 	// Support: IE <=9 only
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 	option: [ 1, "<select multiple='multiple'>", "</select>" ],
 
 	// XHTML parsers do not magically insert elements in the
@@ -26,11 +19,7 @@ var wrapMap = {
 	_default: [ 0, "", "" ]
 };
 
-<<<<<<< HEAD
-// Support: IE9
-=======
 // Support: IE <=9 only
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 wrapMap.optgroup = wrapMap.option;
 
 wrapMap.tbody = wrapMap.tfoot = wrapMap.colgroup = wrapMap.caption = wrapMap.thead;

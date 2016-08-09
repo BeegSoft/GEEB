@@ -15,10 +15,7 @@ define( [
 	"./data/var/dataPriv",
 	"./data/var/dataUser",
 	"./data/var/acceptData",
-<<<<<<< HEAD
-=======
 	"./core/DOMEval",
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 
 	"./core/init",
 	"./traversing",
@@ -27,14 +24,6 @@ define( [
 ], function( jQuery, concat, push, access,
 	rcheckableType, rtagName, rscriptType,
 	wrapMap, getAll, setGlobalEval, buildFragment, support,
-<<<<<<< HEAD
-	dataPriv, dataUser, acceptData ) {
-
-var
-	rxhtmlTag = /<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:-]+)[^>]*)\/>/gi,
-
-	// Support: IE 10-11, Edge 10240+
-=======
 	dataPriv, dataUser, acceptData, DOMEval ) {
 
 "use strict";
@@ -49,7 +38,6 @@ var
 	/* eslint-enable */
 
 	// Support: IE <=10 - 11, Edge 12 - 13
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 	// In IE/Edge using regex groups here causes severe slowdowns.
 	// See https://connect.microsoft.com/IE/feedback/details/1736512/
 	rnoInnerhtml = /<script|<style|<link/i,
@@ -59,16 +47,6 @@ var
 	rscriptTypeMasked = /^true\/(.*)/,
 	rcleanScript = /^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g;
 
-<<<<<<< HEAD
-// Manipulating tables requires a tbody
-function manipulationTarget( elem, content ) {
-	return jQuery.nodeName( elem, "table" ) &&
-		jQuery.nodeName( content.nodeType !== 11 ? content : content.firstChild, "tr" ) ?
-
-		elem.getElementsByTagName( "tbody" )[ 0 ] ||
-			elem.appendChild( elem.ownerDocument.createElement( "tbody" ) ) :
-		elem;
-=======
 function manipulationTarget( elem, content ) {
 	if ( jQuery.nodeName( elem, "table" ) &&
 		jQuery.nodeName( content.nodeType !== 11 ? content : content.firstChild, "tr" ) ) {
@@ -77,7 +55,6 @@ function manipulationTarget( elem, content ) {
 	}
 
 	return elem;
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 }
 
 // Replace/restore the type attribute of script elements for safe DOM manipulation
@@ -195,11 +172,7 @@ function domManip( collection, args, callback, ignored ) {
 					// Keep references to cloned scripts for later restoration
 					if ( hasScripts ) {
 
-<<<<<<< HEAD
-						// Support: Android<4.1, PhantomJS<2
-=======
 						// Support: Android <=4.0 only, PhantomJS 1 only
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 						// push.apply(_, arraylike) throws on ancient WebKit
 						jQuery.merge( scripts, getAll( node, "script" ) );
 					}
@@ -228,11 +201,7 @@ function domManip( collection, args, callback, ignored ) {
 								jQuery._evalUrl( node.src );
 							}
 						} else {
-<<<<<<< HEAD
-							jQuery.globalEval( node.textContent.replace( rcleanScript, "" ) );
-=======
 							DOMEval( node.textContent.replace( rcleanScript, "" ), doc );
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 						}
 					}
 				}
@@ -278,11 +247,7 @@ jQuery.extend( {
 		if ( !support.noCloneChecked && ( elem.nodeType === 1 || elem.nodeType === 11 ) &&
 				!jQuery.isXMLDoc( elem ) ) {
 
-<<<<<<< HEAD
-			// We eschew Sizzle here for performance reasons: http://jsperf.com/getall-vs-sizzle/2
-=======
 			// We eschew Sizzle here for performance reasons: https://jsperf.com/getall-vs-sizzle/2
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 			destElements = getAll( clone );
 			srcElements = getAll( elem );
 
@@ -335,21 +300,13 @@ jQuery.extend( {
 						}
 					}
 
-<<<<<<< HEAD
-					// Support: Chrome <= 35-45+
-=======
 					// Support: Chrome <=35 - 45+
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 					// Assign undefined instead of using delete, see Data#remove
 					elem[ dataPriv.expando ] = undefined;
 				}
 				if ( elem[ dataUser.expando ] ) {
 
-<<<<<<< HEAD
-					// Support: Chrome <= 35-45+
-=======
 					// Support: Chrome <=35 - 45+
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 					// Assign undefined instead of using delete, see Data#remove
 					elem[ dataUser.expando ] = undefined;
 				}
@@ -359,13 +316,6 @@ jQuery.extend( {
 } );
 
 jQuery.fn.extend( {
-<<<<<<< HEAD
-
-	// Keep domManip exposed until 3.0 (gh-2225)
-	domManip: domManip,
-
-=======
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 	detach: function( selector ) {
 		return remove( this, selector, true );
 	},
@@ -523,13 +473,8 @@ jQuery.each( {
 			elems = i === last ? this : this.clone( true );
 			jQuery( insert[ i ] )[ original ]( elems );
 
-<<<<<<< HEAD
-			// Support: QtWebKit
-			// .get() because push.apply(_, arraylike) throws
-=======
 			// Support: Android <=4.0 only, PhantomJS 1 only
 			// .get() because push.apply(_, arraylike) throws on ancient WebKit
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 			push.apply( ret, elems.get() );
 		}
 

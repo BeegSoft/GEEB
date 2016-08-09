@@ -6,11 +6,8 @@ define( [
 	"./var/indexOf"
 ], function( jQuery, document, documentElement, hasOwn, indexOf ) {
 
-<<<<<<< HEAD
-=======
 "use strict";
 
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 /*
  * Optional (non-Sizzle) selector module for custom builds.
  *
@@ -42,9 +39,6 @@ var hasDuplicate, sortInput,
 		documentElement.webkitMatchesSelector ||
 		documentElement.mozMatchesSelector ||
 		documentElement.oMatchesSelector ||
-<<<<<<< HEAD
-		documentElement.msMatchesSelector;
-=======
 		documentElement.msMatchesSelector,
 
 	// CSS string/identifier serialization
@@ -65,7 +59,6 @@ var hasDuplicate, sortInput,
 		// Other potentially-special ASCII characters get backslash-escaped
 		return "\\" + ch;
 	};
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 
 function sortOrder( a, b ) {
 
@@ -138,9 +131,6 @@ function uniqueSort( results ) {
 	return results;
 }
 
-<<<<<<< HEAD
-jQuery.extend( {
-=======
 function escape( sel ) {
 	return ( sel + "" ).replace( rcssescape, fcssescape );
 }
@@ -149,7 +139,6 @@ jQuery.extend( {
 	uniqueSort: uniqueSort,
 	unique: uniqueSort,
 	escapeSelector: escape,
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 	find: function( selector, context, results, seed ) {
 		var elem, nodeType,
 			i = 0;
@@ -179,11 +168,6 @@ jQuery.extend( {
 
 		return results;
 	},
-<<<<<<< HEAD
-	uniqueSort: uniqueSort,
-	unique: uniqueSort,
-=======
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
 	text: function( elem ) {
 		var node,
 			ret = "",

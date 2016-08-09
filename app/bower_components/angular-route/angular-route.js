@@ -1,9 +1,5 @@
 /**
-<<<<<<< HEAD
  * @license AngularJS v1.5.8
-=======
- * @license AngularJS v1.5.7
->>>>>>> 95782b76767dcabf2f7e6e5b8dd257730478b163
  * (c) 2010-2016 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -42,9 +38,6 @@ function shallowCopy(src, dst) {
 // They are initialized inside the `$RouteProvider`, to ensure `window.angular` is available.
 var isArray;
 var isObject;
-// There are necessary for `shallowCopy()` (included via `src/shallowCopy.js`)
-var isArray = angular.isArray;
-var isObject = angular.isObject;
 
 /**
  * @ngdoc module
