@@ -44,6 +44,59 @@
 		.rating > input:checked ~ label:hover,
 		.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 		.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+
+	/*	aqui empieza lo siguiente*/
+		#search-box {
+		position: relative;
+		width: 100%;
+		margin: 0;
+		}
+
+		#search-form 
+		{
+		height: 40px;
+		border: 1px solid #999;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		background-color: #fff;
+		overflow: hidden;
+		}
+		#search-text 
+		{
+		font-size: 14px;
+		color: #ddd;
+		border-width: 0;
+		background: transparent;
+		}
+
+		#search-box input[type="text"]
+		{
+		width: 90%;
+		padding: 11px 0 12px 1em;
+		color: #333;
+		outline: none;
+		}
+
+		#search-button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 42px;
+		width: 80px;
+		font-size: 14px;
+		color: #fff;
+		text-align: center;
+		line-height: 42px;
+		border-width: 0;
+		background-color: #4d90fe;
+		-webkit-border-radius: 0px 5px 5px 0px;
+		-moz-border-radius: 0px 5px 5px 0px;
+		border-radius: 0px 5px 5px 0px;
+		cursor: pointer;
+		}
+
 	</style>
 
 <section id="main">
@@ -53,39 +106,45 @@
 
     <section id="content">
 
-        <div class="container">              
-        
-            <div class="card">
-                <div class="card-header">
-                    <div class="media">
-                        <div class="pull-left">
-                           <a href=""> <img class="lv-img" src="img/profile-pics/perfil.png" alt="Click me"> </a>
-                        </div>
-                        
-                        <div class="media-body m-t-5">
-                          <a href=""> <h2>TOLEDO </h2> </a>
-                         		<fieldset class="rating">
-								    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-								    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-								    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-								    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-								    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-								    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-								    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-								    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-								    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-								    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-								</fieldset>
-								<br><br>
-								<button class="btn btn-default btn-icon-text waves-effect"><i class="zmdi zmdi-close"></i>Cálculo Vectorial</button>
-								<button class="btn btn-default btn-icon-text waves-effect"><i class="zmdi zmdi-close"></i> Ecuaciones Diferenciales</button>
-                        </div>
-                    </div>
-                </div>
-             </div>
-         </div>
-     </div>
- </div>
+
+        <div class="container">
+	     		<div id='search-box'>
+					<form action='/search' id='search-form' method='get' target='_top'>
+						<input id='search-text' class="form control" name='q' placeholder='Busqueda...' type='text'/>
+						<button id='search-button' type='submit'><span>Buscar</span></button>
+					</form>
+				</div>
+				<br>
+		         <div class="card">
+		            <div class="card-header">
+		                <div class="media">
+		                    <div class="pull-left">
+		                         <a href=""> <img class="lv-img" src="img/profile-pics/perfil.png" alt="Click me"> </a>
+		                     </div>
+		                        <div class="media-body m-t-5">
+		                          <a href=""> <h2>TOLEDO </h2> </a>
+		                         		<fieldset class="rating">
+										    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+										    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+										    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+										    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+										    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+										    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+										    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+										    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+										    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+										    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+										</fieldset>
+										<br><br>
+										<button class="btn btn-default btn-icon-text waves-effect"><i class="zmdi zmdi-close"></i>Cálculo Vectorial</button>
+										<button class="btn btn-default btn-icon-text waves-effect"><i class="zmdi zmdi-close"></i> Ecuaciones Diferenciales</button>
+		                        </div>
+		                    </div>
+		                </div>
+		             </div>
+		         </div>
+		     </div>
+ 	 </div>
  </section>
 </section>
 
