@@ -4,7 +4,44 @@
     <aside id="sidebar" data-ng-include="'template/sidebar-left.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
 
     <aside id="chat" data-ng-include="'template/chat.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.right === true }"></aside>
-    <!-- Contenido de los prehorarios -->
+
+    <section id="content">
+        <div class="container">
+	<div class="col-xs-4">
+		<h2 style="margin-left:20px; margin-bottom:0px; margin-top:0px">Carreras </h2>
+		<center>
+			<div class="col-xs-1">
+			<br><br>
+			<button data-ui-sref="biomedica" class="btn bgm-lightblue waves-effect" style="width: 250px;"><i class="zmdi zmdi-favorite zmdi-hc-fw"></i>  Ing. Biomedica</button>
+			<br><br>
+			<button data-ui-sref="electrica"  class="btn bgm-lightblue waves-effect" style="width: 250px;"><i class="zmdi zmdi-flash zmdi-hc-fw"></i>  Ing Electrica</button>
+			<br><br>
+			<button data-ui-sref="electronica"  class="btn bgm-lightblue waves-effect" style="width: 250px;"><i class="zmdi zmdi-flash zmdi-hc-fw"></i>  Ing. Electronica</button>
+			<br><br>
+			<button data-ui-sref="industrial"  class="btn bgm-lightblue waves-effect" style="width: 250px;"><i class="zmdi zmdi-city zmdi-hc-fw"></i>  Ing.industrial</button>
+			<br><br>
+			<button  data-ui-sref="mecanica" class="btn bgm-lightblue waves-effect" style="width: 250px;"><i class="zmdi zmdi-wrench zmdi-hc-fw"></i>  Ing. Mecanica</button>
+			<br><br>
+			<button  data-ui-sref="mecatronica" class="btn bgm-lightblue waves-effect" style="width: 250px;"><i class="zmdi zmdi-settings zmdi-hc-fw"></i>  Ing. Mecatronica</button>
+			<br><br>
+			<button  data-ui-sref="administracion" class="btn bgm-lightblue waves-effect" style="width: 250px;"><i class="zmdi zmdi-book zmdi-hc-fw"></i>  Lic. Administracion</button>
+			<br><br>
+			<button  data-ui-sref="sistemas" class="btn bgm-lightblue waves-effect" style="width: 250px;"><i class="zmdi zmdi-laptop zmdi-hc-fw"></i>  Ing. Sistemas</button>
+			<br><br>
+			<button  data-ui-sref="informatica" class="btn bgm-lightblue waves-effect" style="width: 250px;"><i class="zmdi zmdi-smartphone-android zmdi-hc-fw"></i>  Ing. Informatica</button>
+			<br><br>
+			<button  data-ui-sref="gestion" class="btn bgm-lightblue waves-effect" style="width: 250px;"><i class="zmdi zmdi-chart zmdi-hc-fw"></i>  Ing. Gestion Empresarial</button>
+			</div>
+		</center>
+	</div>
+
+	<div class="col-xs-8">
+		<img style="margin-top:80px" src="img/geebsoft.png" alt="">
+	</div>
+
+        </div>
+    </section>
 </section>
 
 <footer id="footer" data-ng-include="'template/footer.html'"></footer>
+

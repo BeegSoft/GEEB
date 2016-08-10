@@ -1,0 +1,46 @@
+<div class="container">
+
+    <div class="block-header">
+        <h2>vm.perfilNombre</h2>
+    </div>
+
+    <div class="card" id="profile-main" data-ng-controller="profileCtrl as pctrl">
+        <div class="pm-overview c-overflow">
+            <div class="pmo-pic">
+                <div class="p-relative">
+                    <a href="">
+                        <img class="img-responsive" src="img/profile-pics/profile-pic-2.jpg" alt="">
+                    </a>
+
+                    <div class="dropdown pmop-message" uib-dropdown>
+                        <button uib-dropdown-toggle class="btn bgm-white btn-float">
+                            <i class="zmdi zmdi-comment-text-alt"></i>
+                        </button>
+
+                        <div class="dropdown-menu stop-propagate">
+                            <textarea placeholder="Write something..."></textarea>
+
+                            <button class="btn bgm-green btn-float"><i class="zmdi zmdi-mail-send"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="pmo-stat">
+                    <h2 class="m-0 c-white">1562</h2>
+                    Total de visitas
+                    <br><br>
+                    *****
+                    <br>
+                    Puntuación
+                </div>
+            </div>
+        </div>
+
+        <div class="pm-body clearfix">
+            <ul class="tab-nav tn-justified" data-ng-include="'template/profile-menu.html'"></ul>
+
+            <data ui-view></data>
+        </div>
+    </div>
+</div>
