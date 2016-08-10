@@ -6,11 +6,7 @@ materialAdmin
             
             .state ('maestros', {
                 url: '/maestros',
-                templateUrl: 'views/maestros.html',
-            })
-            .state ('home', {
-                url: '/home',
-                templateUrl: 'views/home.html',
+                templateUrl: 'views/maestros.html'
             })
 
             .state ('materias', {
@@ -19,7 +15,7 @@ materialAdmin
             })
             .state ('sugerencias', {
                 url: '/sugerencias',
-                templateUrl: 'views/sugerencias.html',
+                templateUrl: 'views/sugerencias.html'
             })
             .state ('preHorarios', {
                 url: '/preHorarios',
@@ -65,7 +61,7 @@ materialAdmin
             .state ('biomedica', {
                 url: '/biomedica',
                 templateUrl: 'views/PreHorarios/biomedica.html'
-
+            })
 
             .state ('pages', {
                 url: '/pages',
@@ -80,12 +76,12 @@ materialAdmin
         
             .state ('pages.profile.profile-comentarios', {
                 url: '/profile-comentarios',
-                templateUrl: 'views/profile-comentarios.html',
+                templateUrl: 'views/profile-comentarios.html'
             })
 
             .state ('pages.profile.profile-preguntas', {
                 url: '/profile-preguntas',
-                templateUrl: 'views/profile-preguntas.html',
+                templateUrl: 'views/profile-preguntas.html'
             })
 
             .state ('pages.home', {
@@ -95,16 +91,16 @@ materialAdmin
         
             .state ('pages.home.home-vistos', {
                 url: '/home-vistos',
-                templateUrl: 'views/home-vistos.html',
+                templateUrl: 'views/home-vistos.html'
             })
 
             .state ('pages.home.home-comentados', {
                 url: '/home-comentados',
-                templateUrl: 'views/home-comentados.html',
+                templateUrl: 'views/home-comentados.html'
             })
             .state ('pages.home.home-valorados', {
                 url: '/home-valorados',
-                templateUrl: 'views/home-valorados.html',
+                templateUrl: 'views/home-valorados.html'
             })
         
             //-------------------------------
