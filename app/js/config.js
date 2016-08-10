@@ -1,12 +1,16 @@
 materialAdmin
     .config(function ($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise("/maestros");
+        $urlRouterProvider.otherwise("/pages/home/home-vistos");
 
         $stateProvider
             
             .state ('maestros', {
                 url: '/maestros',
                 templateUrl: 'views/maestros.html',
+            })
+            .state ('home', {
+                url: '/home',
+                templateUrl: 'views/home.html',
             })
 
             .state ('materias', {
@@ -33,64 +37,34 @@ materialAdmin
                 templateUrl: 'views/profile.html'
             })
         
-            .state ('pages.profile.profile-about', {
-                url: '/profile-about',
-                templateUrl: 'views/profile-about.html'
-            })
-        
             .state ('pages.profile.profile-comentarios', {
                 url: '/profile-comentarios',
                 templateUrl: 'views/profile-comentarios.html',
-                resolve: {
-                    loadPlugin: function($ocLazyLoad) {
-                        return $ocLazyLoad.load ([
-                            {
-                                name: 'css',
-                                insertBefore: '#app-level',
-                                files: [
-                                    'vendors/bower_components/lightgallery/light-gallery/css/lightGallery.css'
-                                ]
-                            },
-                            {
-                                name: 'vendors',
-                                files: [
-                                    'vendors/bower_components/lightgallery/light-gallery/js/lightGallery.min.js'
-                                ]
-                            }
-                        ])
-                    }
-                }
             })
 
             .state ('pages.profile.profile-preguntas', {
                 url: '/profile-preguntas',
                 templateUrl: 'views/profile-preguntas.html',
-                resolve: {
-                    loadPlugin: function($ocLazyLoad) {
-                        return $ocLazyLoad.load ([
-                            {
-                                name: 'css',
-                                insertBefore: '#app-level',
-                                files: [
-                                    'vendors/bower_components/lightgallery/light-gallery/css/lightGallery.css'
-                                ]
-                            },
-                            {
-                                name: 'vendors',
-                                files: [
-                                    'vendors/bower_components/lightgallery/light-gallery/js/lightGallery.min.js'
-                                ]
-                            }
-                        ])
-                    }
-                }
+            })
+
+            .state ('pages.home', {
+                url: '/home',
+                templateUrl: 'views/home.html'
             })
         
-            .state ('pages.profile.profile-connections', {
-                url: '/profile-connections',
-                templateUrl: 'views/profile-connections.html'
+            .state ('pages.home.home-vistos', {
+                url: '/home-vistos',
+                templateUrl: 'views/home-vistos.html',
             })
-        
+
+            .state ('pages.home.home-comentados', {
+                url: '/home-comentados',
+                templateUrl: 'views/home-comentados.html',
+            })
+            .state ('pages.home.home-valorados', {
+                url: '/home-valorados',
+                templateUrl: 'views/home-valorados.html',
+            })
         
             //-------------------------------
         
