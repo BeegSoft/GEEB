@@ -1,4 +1,4 @@
-<div class="timeline">
+<div class="timeline" ng-controller="geebController as vm">
     <div class="t-view" data-tv-type="text">
         <div class="tv-body">
             <div class="clearfix"></div>
@@ -14,63 +14,46 @@
 
         <div class="tv-comments">
             <ul class="tvc-lists">
-                <li class="media">
+                <li class="media" ng-repeat="comentario in vm.arrayComentarios">
                     <a href="" class="tvh-user pull-left">
                         <img class="img-responsive" src="img/profile-pics/1.jpg" alt="">
                     </a>
                     <div class="media-body">
-                        <strong class="d-block">David Peiterson</strong>
-                        <small class="c-gray">April 23, 2014 at 05:10</small>
+                        <strong class="d-block">{{comentario.titulo}}</strong>
+                        <small class="c-gray">{{comentario.fecha}}</small>
 
-                        <div class="m-t-10">Maecenas fermentum tellus ex, ac aliquet nisl malesuada id.</div>
+                        <div class="m-t-10">{{comentario.cuerpo}}</div>
 
-                    </div>
-                </li>
-
-                <li class="media">
-                    <a href="" class="tvh-user pull-left">
-                        <img class="img-responsive" src="img/profile-pics/2.jpg" alt="">
-                    </a>
-                    <div class="media-body">
-                        <strong class="d-block">Wernall Parnell</strong>
-                        <small class="c-gray">April 22, 2014 at 13:00</small>
-
-                        <div class="m-t-10">Nulla vehicula erat nec odio dignissim, sit amet porttitor lorem auctor. Maecenas fermentum tellus ex, ac aliquet nisl malesuada id.</div>
-
-                    </div>
-                </li>
-
-                <li class="media">
-                    <a href="" class="tvh-user pull-left">
-                        <img class="img-responsive" src="img/profile-pics/3.jpg" alt="">
-                    </a>
-                    <div class="media-body">
-                        <strong class="d-block">Shane Lee Yong</strong>
-                        <small class="c-gray">April 19, 2014 at 10:10</small>
-
-                        <div class="m-t-10">Sit amet porttitor lorem auctor. Maecenas fermentum tellus ex, ac aliquet nisl malesuada idwoon lorem ipsum.</div>
                     </div>
                 </li>
 
                 <li class="p-20">
-                    <fieldset class="rating">
-                                    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-                                    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-                                    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-                                    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-                                    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-                                    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-                                    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-                                    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-                                    <input type="radio" id="star1" name="rating" value="1"  /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-                                    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars" ></label>
-                                </fieldset>
-                                <br><br>
-                    <div class="fg-line">
-                        <textarea class="form-control auto-size" placeholder="Write a comment..." rows="4"></textarea>
-                    </div>
-                    
-                    <button class="m-t-15 btn btn-primary btn-sm">Post</button>
+
+                    <p style="margin-bottom:0px">Califica</p>
+                    <form >
+                        
+                        <fieldset class="rating">
+                                        <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                                        <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                                        <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                                        <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                                        <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                                        <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                                        <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                                        <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"  /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                                        <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars" ></label>
+                                    </fieldset>
+                                    <br><br>
+                        <div class="fg-line">
+                            <input type="text" class="form-control auto-size" ng-model="vm.titulo" placeholder="Nombre" style="padding-bottom:10px; margin-top:15px">
+                        </div>
+                        <br><br>
+                        <div class="fg-line">
+                            <textarea class="form-control auto-size" placeholder="Escribe un comentario..." rows="4" ng-model="vm.cuerpo"></textarea>
+                        </div>
+                        <button class="m-t-15 btn btn-primary btn-sm" ng-click="vm.anadirComentario()" >Enviar</button>
+                    </form>
                 </li>
             </ul>
         </div>

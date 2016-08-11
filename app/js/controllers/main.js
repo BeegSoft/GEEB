@@ -461,7 +461,7 @@ materialAdmin
     })
 
     .controller('geebController', ['$firebaseArray', '$scope',
-        function($firebaseArray, $scope ){
+        function($firebaseArray, $scope, $sessionStorage, $localStorage ){
             var vm = this;
             //variables globales
             var refTodosMaestros = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/TodosMaestros/');
@@ -472,16 +472,25 @@ materialAdmin
             var arrayMaestros = $firebaseArray(refMaestros);
             
             vm.alerta = function(maestro){
-                vm.maestroNombre = maestro;
-                alert(vm.maestroNombre);
+                localStorage.setItem("nombre", maestro);
+                
             }
-            vm.algo = "hola";
+            vm.nombreLocal = localStorage.getItem("nombre");
 
-            vm.alertaa = function(){
-                alert(vm.maestroNombre);
+            var childMa = refMaestros.child(vm.nombreLocal + '/Comentarios/');
+            vm.arrayComentarios = $firebaseArray(childMa);
+
+            vm.anadirComentario = function(){
+                var childMaestro = refMaestros.child(vm.nombreLocal + '/Comentarios/');
+                vm.Comentarios =  $firebaseArray(childMaestro);
+
+                vm.Comentarios.$add({
+                    titulo: vm.titulo,
+                    cuerpo: vm.cuerpo
+                });
+                vm.titulo = '';
+                vm.cuerpo = '';
             }
-            
-
     }])
 
 

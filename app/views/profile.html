@@ -1,7 +1,8 @@
 <div class="container">
 
     <div class="block-header" ng-controller="geebController as vm">
-        <h2 ng-click="vm.alertaa()"> {{vm.maestroNombre}}</h2>
+        <h2> {{vm.nombreLocal}}
+            <small>@Instituto Tecnologico de Hermosillo</small></h2>
     </div>
 
     <div class="card" id="profile-main" data-ng-controller="profileCtrl as pctrl">
@@ -9,7 +10,7 @@
             <div class="pmo-pic">
                 <div class="p-relative">
                     <a href="">
-                        <img class="img-responsive" src="img/profile-pics/profile-pic-2.jpg" alt="">
+                        <img class="img-responsive" src="img/profile-pics/perfilMaestro.png" alt="">
                     </a>
 
                     <div class="dropdown pmop-message" uib-dropdown>
@@ -30,9 +31,8 @@
                     <h2 class="m-0 c-white">1562</h2>
                     Total de visitas
                     <br><br>
-                    *****
-                    <br>
-                    Puntuación
+                    <h3 class="m-0 c-white">4.5</h3>
+                    <p style="padding-bottom:5px">Puntuación</p>
                 </div>
             </div>
         </div>

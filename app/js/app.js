@@ -7,6 +7,7 @@ var materialAdmin = angular.module('materialAdmin', [
     'oc.lazyLoad',
     'nouislider',
     'ngTable',
-    'firebase'
+    'firebase',
+    'ngStorage'
 ])
  
