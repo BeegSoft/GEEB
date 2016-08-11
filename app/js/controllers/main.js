@@ -471,7 +471,7 @@ materialAdmin
                 
             var arrayMaestros = $firebaseArray(refMaestros);
             
-            vm.alerta = function(maestro){
+            vm.Gnombre = function(maestro){
                 localStorage.setItem("nombre", maestro);
                 
             }

@@ -1,6 +1,6 @@
 <header id="header" data-current-skin={{mactrl.currentSkin}} data-ng-include="'template/header.html'" data-ng-controller="headerCtrl as hctrl"></header>
 
-<section id="main">
+<section id="main" ng-controller="geebController as vm">
     <aside id="sidebar" data-ng-include="'template/sidebar-left.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
 
     <aside id="chat" data-ng-include="'template/chat.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.right === true }"></aside>
@@ -49,7 +49,7 @@
 						<td>Calculo Diferencial</td>
 						<td>5</td>
 						<td>5</td>
-						<td>ROSAS PANDURO DAGOBERTO</td>
+						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('PEREZ PEREZ DANIEL')" style="cursor: pointer;">ROSAS PANDURO DAGOBERTO</td>
 						<td>A81</td>
 						<td>9:00 - 10:00</td>
 						<td> - </td>
