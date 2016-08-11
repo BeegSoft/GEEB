@@ -8,8 +8,8 @@
 
     <section id="content" ng-controller="geebController as vm">
 		<div id='search-box' style="margin-bottom: 50px; widht: 200px" >
-					<form action='/search' id='search-form' method='get' target='_top'>
-						<input id='search-text' class="form control" name='q' placeholder='Busqueda...' type='text' ng-model="vm.buscarMaestro"/>
+					<form ng-submit="vm.busqueda(vm.buscarM)" id='search-form'>
+						<input id='search-text' class="form control" name='q' placeholder='Busqueda...' type='text' ng-model="vm.buscarM"/>
 						<button id='search-button' type='submit'><span>Buscar</span></button>
 					</form>
 				</div>

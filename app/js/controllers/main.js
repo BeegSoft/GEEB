@@ -491,6 +491,10 @@ materialAdmin
                 vm.titulo = '';
                 vm.cuerpo = '';
             }
+
+            vm.busqueda = function(buscar){
+                vm.buscarMaestro = buscar;
+            }
     }])
 
 
