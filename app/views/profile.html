@@ -1,7 +1,7 @@
 <div class="container">
 
-    <div class="block-header">
-        <h2>vm.perfilNombre</h2>
+    <div class="block-header" ng-controller="geebController as vm">
+        <h2 ng-click="vm.alertaa()"> {{vm.maestroNombre}}</h2>
     </div>
 
     <div class="card" id="profile-main" data-ng-controller="profileCtrl as pctrl">

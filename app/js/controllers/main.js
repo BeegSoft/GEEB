@@ -460,6 +460,30 @@ materialAdmin
     
     })
 
+    .controller('geebController', ['$firebaseArray', '$scope',
+        function($firebaseArray, $scope ){
+            var vm = this;
+            //variables globales
+            var refTodosMaestros = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/TodosMaestros/');
+            vm.arrayTodosMaestros = $firebaseArray(refTodosMaestros);
+
+            var refMaestros = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/');
+                
+            var arrayMaestros = $firebaseArray(refMaestros);
+            
+            vm.alerta = function(maestro){
+                vm.maestroNombre = maestro;
+                alert(vm.maestroNombre);
+            }
+            vm.algo = "hola";
+
+            vm.alertaa = function(){
+                alert(vm.maestroNombre);
+            }
+            
+
+    }])
+
 
     // =========================================================================
     // ANIMATIONS DEMO
