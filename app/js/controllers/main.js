@@ -479,7 +479,7 @@ materialAdmin
 
             var childMa = refMaestros.child(vm.nombreLocal + '/Comentarios/');
             vm.arrayComentarios = $firebaseArray(childMa);
-
+            vm.bol = false;
             vm.anadirComentario = function(){
                 var childMaestro = refMaestros.child(vm.nombreLocal + '/Comentarios/');
                 vm.Comentarios =  $firebaseArray(childMaestro);
@@ -488,14 +488,39 @@ materialAdmin
                     titulo: vm.titulo,
                     cuerpo: vm.cuerpo
                 });
+
+
+                //checar si ya existe el maestro
+                for (var i = 0; i < vm.arrayTodosMaestros.length; i++) {
+                    if(vm.arrayTodosMaestros[i].nombre === vm.nombreLocal){
+                        vm.bol = true;
+                    };
+                };
+                    
+                if(vm.bol === false){
+                    vm.arrayTodosMaestros.$add({
+                        nombre: vm.nombreLocal
+                    })
+                }
+
                 vm.titulo = '';
                 vm.cuerpo = '';
+                vm.bol = false;
             }
 
             vm.busqueda = function(buscar){
                 vm.buscarMaestro = buscar;
             }
+            vm.star = false;
+            vm.probar =function(rating){
+                if(rating === true){
+                    alert('Funciono!!!');
+                }else{
+                    alert('No funcono!');
+                }
+            }
     }])
+
 
 
     // =========================================================================
