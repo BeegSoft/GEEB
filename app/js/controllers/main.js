@@ -495,7 +495,16 @@ materialAdmin
             vm.busqueda = function(buscar){
                 vm.buscarMaestro = buscar;
             }
+            vm.star = false;
+            vm.probar =function(rating){
+                if(rating === true){
+                    alert('Funciono!!!');
+                }else{
+                    alert('No funcono!');
+                }
+            }
     }])
+
 
 
     // =========================================================================
