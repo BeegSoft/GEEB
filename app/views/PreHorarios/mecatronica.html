@@ -1,6 +1,6 @@
 <header id="header" data-current-skin={{mactrl.currentSkin}} data-ng-include="'template/header.html'" data-ng-controller="headerCtrl as hctrl"></header>
 
-<section id="main">
+<section id="main" ng-controller="geebController as vm">
     <aside id="sidebar" data-ng-include="'template/sidebar-left.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
 
     <aside id="chat" data-ng-include="'template/chat.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.right === true }"></aside>
@@ -28,12 +28,17 @@
 			<h4 style="color: #34495e">Pre-Horarios</h4>
 		</center>
 
+<br><br>
+<p>PAQUETE 3/1 Matutino</p><center><p> Semestre</p></center>
 <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr >
 						<th>Materia</th>
+						<th>No. Creditos</th>
+						<th>Hrs sem</th>
 						<th>Maestro</th>
+						<th>Aula</th>
 						<th>lunes</th>
 						<th>Martes</th>
 						<th>Miercoles</th>
@@ -43,49 +48,206 @@
                 </thead>
                 <tbody>
                     <tr class="info">
-						<td>Calculo Diferencial</td>
-						<td>Panduro</td>
+						<td>CALCULO VECTORIAL</td>
+						<td>5</td>
+						<td>5</td>
+						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('SANTANA ROSAS MARIA ASUNCION')" style="cursor: pointer;">SANTANA ROSAS MARIA ASUNCION</td>
+						<td>B38</td>
+						<td>8:00 - 9:00</td>
 						<td>7:00 - 9:00</td>
+						<td> - </td>
 						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
+						<td> - </td>
                     </tr>
                     <tr >
-						<td>Quimica</td>
-						<td>Sin Asignar</td>
+						<td>PROCESOS DE FABRICACION</td>
+						<td>4</td>
+						<td>4</td>
+						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MONTEVERDE GUTIERREZ OFELIA')" style="cursor: pointer;">MONTEVERDE GUTIERREZ OFELIA</td>
+						<td>B38</td>
+						<td> - </td>
+						<td> - </td>
 						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
+						<td> - </td>
 						<td>7:00 - 9:00</td>
                     </tr>
                     <tr class="info">
-						<td>Fund. De Telecom</td>
-						<td>Elmer galarga</td>
+						<td>ELECTROMAGNETISMO</td>
+						<td>5</td>
+						<td>5</td>
+						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('BENITEZ MONGE HORACIO')" style="cursor: pointer;">BENITEZ MONGE HORACIO</td>
+						<td>B3C</td>
+						<td>11:00 - 12:00</td>
+						<td>11:00 - 13:00</td>
+						<td> - </td>
+						<td>11:00 - 13:00</td>
+						<td> - </td>
+                    </tr>
+                    <tr >
+						<td>ELECTROMAGNETISMO **EN INGLES**</td>
+						<td>5</td>
+						<td>5</td>
+						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MOCTEZUMA ENRIQUEZ DAMIAN')" style="cursor: pointer;">MOCTEZUMA ENRIQUEZ DAMIAN</td>
+						<td>B38</td>
+						<td>11:00 - 12:00</td>
+						<td>11:00 - 13:00</td>
+						<td> - </td>
+						<td>11:00 - 13:00</td>
+						<td> - </td>
+                    </tr>
+                    <tr class="info">
+						<td>ESTATICA</td>
+						<td>4</td>
+						<td>4</td>
+						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('CARDENAS GARCIA LUIS ALFONSO')" style="cursor: pointer;">CARDENAS GARCIA LUIS ALFONSO</td>
+						<td>B38</td>
+						<td> - </td>
+						<td>9:00 - 11:00</td>
+						<td> - </td>
+						<td>9:00 - 11:00</td>
+						<td> - </td>
+                    </tr>
+                    <tr >
+						<td>MET NUMERICOS</td>
+						<td>4</td>
+						<td>4</td>
+						<td>SIN MAESTRO ASIGNADO</td>
+						<td>B38</td>
+						<td> - </td>
+						<td> - </td>
+						<td>11:00 - 13:00</td>
+						<td> - </td>
+						<td>11:00 - 13:00</td>
+                    </tr>
+                    <tr class="info">
+						<td>ALGEBRA LINEAL</td>
+						<td>5</td>
+						<td>5</td>
+						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('CLAUSEN SEVILLA JORGE EDGAR')" style="cursor: pointer;">CLAUSEN SEVILLA JORGE EDGAR</td>
+						<td>B38</td>
+						<td>9:00 - 10:00</td>
+						<td> - </td>
+						<td>9:00 - 11:00</td>
+						<td> - </td>
+						<td>9:00 - 11:00</td>
+                    </tr>
+                    <tr >
+						<td>ESTADISTICA Y CONTROL DE CALIDAD</td>
+						<td>4</td>
+						<td>4</td>
+						<td>SIN MAESTRO ASIGNADO</td>
+						<td>B38</td>
+						<td>13:00 - 14:00</td>
+						<td>13:00 - 14:00</td>
+						<td>13:00 - 14:00</td>
+						<td>13:00 - 14:00</td>
+						<td> - </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+<br><br>
+<p>PAQUETE 3/2 Matutino</p><center><p>Semestre</p></center>
+<div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr >
+						<th>Materia</th>
+						<th>No. Creditos</th>
+						<th>Hrs sem</th>
+						<th>Maestro</th>
+						<th>Aula</th>
+						<th>lunes</th>
+						<th>Martes</th>
+						<th>Miercoles</th>
+						<th>Jueves</th>
+						<th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="info">
+						<td>CALCULO VECTORIAL</td>
+						<td>5</td>
+						<td>5</td>
+						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('SANTANA ROSAS MARIA ASUNCION')" style="cursor: pointer;">SANTANA ROSAS MARIA ASUNCION</td>
+						<td>B39</td>
+						<td>7:00 - 8:00</td>
+						<td> - </td>
 						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
+						<td> - </td>
 						<td>7:00 - 9:00</td>
                     </tr>
                     <tr >
-						<td>Fisica</td>
-						<td>Sin Asignar</td>
+						<td>PROCESOS DE FABRICACION</td>
+						<td>4</td>
+						<td>4</td>
+						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MONTEVERDE GUTIERREZ OFELIA')" style="cursor: pointer;">MONTEVERDE GUTIERREZ OFELIA</td>
+						<td>B39</td>
+						<td> - </td>
 						<td>7:00 - 9:00</td>
+						<td> - </td>
 						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
+						<td> - </td>
                     </tr>
                     <tr class="info">
-						<td>Etica</td>
-						<td>Sin Asignar</td>
-						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
-						<td>7:00 - 9:00</td>
+						<td>ELECTROMAGNETISMO</td>
+						<td>5</td>
+						<td>5</td>
+						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MOCTEZUMA ENRIQUEZ DAMIAN')" style="cursor: pointer;">MOCTEZUMA ENRIQUEZ DAMIAN</td>
+						<td>B3C</td>
+						<td>10:00 - 11:00</td>
+						<td>9:00 - 11:00</td>
+						<td> - </td>
+						<td>9:00 - 11:00</td>
+						<td> - </td>
+                    </tr>
+                    <tr >
+						<td>ESTATICA</td>
+						<td>4</td>
+						<td>4</td>
+						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MORENO HERNANDEZ CANDELARIO')" style="cursor: pointer;">MORENO HERNANDEZ CANDELARIO</td>
+						<td>B39</td>
+						<td> - </td>
+						<td> - </td>
+						<td>9:00 - 11:00</td>
+						<td> - </td>
+						<td>9:00 - 11:00</td>
+                    </tr>
+                    <tr class="info">
+						<td>MET NUMERICOS</td>
+						<td>4</td>
+						<td>4</td>
+						<td>SIN MAESTRO ASIGNADO</td>
+						<td>B39</td>
+						<td> - </td>
+						<td>11:00 - 13:00</td>
+						<td> - </td>
+						<td>11:00 - 13:00</td>
+						<td> - </td>
+                    </tr>
+                    <tr >
+						<td>ALGEBRA LINEAL</td>
+						<td>5</td>
+						<td>5</td>
+						<td>SIN MAESTRO ASIGNADO</td>
+						<td>B39</td>
+						<td>11:00 - 12:00</td>
+						<td> - </td>
+						<td>11:00 - 13:00</td>
+						<td> - </td>
+						<td>11:00 - 13:00</td>
+                    </tr>
+                    <tr class="info">
+						<td>CALCULO INTEGRAL</td>
+						<td>5</td>
+						<td>5</td>
+						<td>SIN MAESTRO ASIGNADO</td>
+						<td>B39</td>
+						<td>13:00 - 14:00</td>
+						<td>13:00 - 14:00</td>
+						<td>13:00 - 14:00</td>
+						<td>13:00 - 14:00</td>
+						<td>13:00 - 14:00</td>
                     </tr>
                 </tbody>
             </table>
