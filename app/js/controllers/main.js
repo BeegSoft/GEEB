@@ -473,13 +473,41 @@ materialAdmin
             
             vm.Gnombre = function(maestro){
                 localStorage.setItem("nombre", maestro);
+
+                var childVisitas = refMaestros.child(maestro + '/visitas');
+                vm.arrayVisitas = $firebaseArray(childVisitas);
                 
+                    
+                
+                refMaestros.child(maestro + '/visitas').set({ visitas: 1});
             }
+
             vm.nombreLocal = localStorage.getItem("nombre");
+            vm.lengthComentarios = localStorage.getItem("comentario");
 
             var childMa = refMaestros.child(vm.nombreLocal + '/Comentarios/');
             vm.arrayComentarios = $firebaseArray(childMa);
+
+            //Contar los comentarios
+            vm.arrayComentarios.$loaded().then(function() {
+               vm.conta = vm.arrayComentarios.length;
+            });
+
+            //Promediar la calificacion
+            var childCalificacion = refMaestros.child(vm.nombreLocal + '/Calificacion/');
+            vm.arrayCalificaciones = $firebaseArray(childCalificacion);
+
+            vm.arrayCalificaciones.$loaded().then(function() {
+                var sumaCalificacion = 0;
+                for (var i = 0; i < vm.arrayCalificaciones.length; i++) {
+                    sumaCalificacion = sumaCalificacion + vm.arrayCalificaciones[i].calificacion;
+                };
+
+                vm.promedioCalificacion = (sumaCalificacion / vm.arrayCalificaciones.length).toFixed(1);
+            });
+
             vm.bol = false;
+
             vm.anadirComentario = function(){
                 var childMaestro = refMaestros.child(vm.nombreLocal + '/Comentarios/');
                 vm.Comentarios =  $firebaseArray(childMaestro);
@@ -488,7 +516,6 @@ materialAdmin
                     titulo: vm.titulo,
                     cuerpo: vm.cuerpo
                 });
-
 
                 //checar si ya existe el maestro
                 for (var i = 0; i < vm.arrayTodosMaestros.length; i++) {
@@ -500,24 +527,44 @@ materialAdmin
                 if(vm.bol === false){
                     vm.arrayTodosMaestros.$add({
                         nombre: vm.nombreLocal
-                    })
-                }
+                    });
+                };
+
+                //Para contar los comentarios
+                vm.arrayComentarios.$loaded().then(function() {
+                   vm.conta = vm.arrayComentarios.length;
+                });
 
                 vm.titulo = '';
                 vm.cuerpo = '';
                 vm.bol = false;
             }
-
+            
             vm.busqueda = function(buscar){
                 vm.buscarMaestro = buscar;
             }
-            vm.star = false;
-            vm.probar =function(rating){
-                if(rating === true){
-                    alert('Funciono!!!');
-                }else{
-                    alert('No funcono!');
-                }
+
+            vm.rating =function(rating){
+                vm.star = rating;
+            }
+
+            vm.enviarCalificacion = function(){
+                var childCalificacion = refMaestros.child(vm.nombreLocal + '/Calificacion/');
+                vm.arrayCalificaciones = $firebaseArray(childCalificacion);
+
+                vm.arrayCalificaciones.$add({
+                    calificacion: vm.star
+                })
+                
+                vm.arrayCalificaciones.$loaded().then(function() {
+                    var sumaCalificacion = 0;
+                    for (var i = 0; i < vm.arrayCalificaciones.length; i++) {
+                        sumaCalificacion = sumaCalificacion + vm.arrayCalificaciones[i].calificacion;
+                    };
+
+                    vm.promedioCalificacion = sumaCalificacion / vm.arrayCalificaciones.length;
+                });
+                alert('Gracias por calificar a este maestro!');
             }
     }])
 

@@ -7,12 +7,14 @@
     <aside id="chat" data-ng-include="'template/chat.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.right === true }"></aside>
 
     <section id="content" ng-controller="geebController as vm">
-		<div id='search-box' style="margin-bottom: 50px; widht: 200px" >
+		<div class="container" id='search-box' style="margin-bottom: 50px;">
+			<div style="margin-left: 400px; margin-right: 400px">
 					<form ng-submit="vm.busqueda(vm.buscarM)" id='search-form'>
 						<input id='search-text' class="form control" name='q' placeholder='Busqueda...' type='text' ng-model="vm.buscarM"/>
-						<button id='search-button' type='submit'><span>Buscar</span></button>
+						<button id='search-button' type='submit' style="margin-right:400px; height:40px"><span>Buscar</span></button>
 					</form>
-				</div>
+			</div>
+		</div>
         <div class="container"  ng-repeat="maestro in vm.arrayTodosMaestros | filter: vm.buscarMaestro">              
         
             <div class="card" >
