@@ -1,4 +1,4 @@
-materialAdmin
+geebSoft
     .config(function ($stateProvider, $urlRouterProvider){
         $urlRouterProvider.otherwise("/pages/home/home-vistos");
 

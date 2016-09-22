@@ -6,8 +6,8 @@
 
     <aside id="chat" data-ng-include="'template/chat.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.right === true }"></aside>
 
-    <section id="content" ng-controller="geebController as vm">
-		<div class="container" id='search-box' style="margin-bottom: 50px;">
+    <section id="content" ng-controller="buscarMaestroCtrl as vm">
+		<div class="container" id='search-box' style="margin-bottom: 50px; margin-left: -8px">
 			<div style="margin-left: 400px; margin-right: 400px">
 					<form ng-submit="vm.busqueda(vm.buscarM)" id='search-form'>
 						<input id='search-text' class="form control" name='q' placeholder='Busqueda...' type='text' ng-model="vm.buscarM"/>
@@ -15,14 +15,14 @@
 					</form>
 			</div>
 		</div>
-        <div class="container"  ng-repeat="maestro in vm.arrayTodosMaestros | filter: vm.buscarMaestro">              
-        
-            <div class="card" >
+        <div class="container"  ng-repeat="maestro in vm.arrayTodosMaestros | filter: vm.buscarMaestro | limitTo : 5">              
+        	<div class="col-xs-3"></div>
+            <div class="card col-xs-6" >
                 <div class="card-header">
                     <div class="media">
                     	
                         <div class="pull-left">
-                           <a data-ui-sref="pages.profile.profile-comentarios" > <img class="lv-img" src="img/profile-pics/perfil.png" alt="Click me"> </a>
+                           <a data-ui-sref="pages.profile.profile-comentarios" > <img class="lv-img" src="img/profile-pics/perfil.png" alt="Click me" style="width: 65px; height: auto;"> </a>
                         </div>
                         
                         <div class="media-body m-t-5" >
@@ -48,6 +48,7 @@
                     </div>
                 </div>
              </div>
+             <div class="col-xs-3"></div>
          </div>
      </div>
  </div>

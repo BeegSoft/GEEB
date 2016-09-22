@@ -1,4 +1,4 @@
-var materialAdmin = angular.module('materialAdmin', [
+var geebSoft = angular.module('geebSoft', [
     'ngAnimate',
     'ngResource',
     'ui.router',
