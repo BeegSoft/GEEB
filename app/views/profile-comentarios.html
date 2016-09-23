@@ -31,7 +31,7 @@
 
         <div class="tv-comments">
             <ul class="tvc-lists">
-                <li class="media" ng-repeat="comentario in vm.arrayComentarios">
+                <li class="media" ng-repeat="comentario in vm.arrayComentarios | limitTo: vm.limit">
                     <a href="" class="tvh-user pull-left">
                         <img class="img-responsive" src="img/profile-pics/1.jpg" alt="">
                     </a>
@@ -43,7 +43,7 @@
 
                     </div>
                 </li>
-
+                <div class="viewAllComment "><button class=" btn btn-primary btn-sm" ng-click="vm.masComentarios()">Ver mas comentarios</button></div>
                 <li class="p-20">
 
                     

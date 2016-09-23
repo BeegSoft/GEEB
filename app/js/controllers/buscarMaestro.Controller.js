@@ -3,6 +3,8 @@ geebSoft
 	    function($firebaseArray, $scope, $sessionStorage, $localStorage ){
 	    	var vm = this;
 
+            vm.limit = 5;
+            
 	    	var refTodosMaestros = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/TodosMaestros/');
             vm.arrayTodosMaestros = $firebaseArray(refTodosMaestros);
 
@@ -19,6 +21,10 @@ geebSoft
             }
             vm.busqueda = function(buscar){
                 vm.buscarMaestro = buscar;
+            }
+
+            vm.masComentarios = function(){
+                vm.limit += 5;
             }
 
 	    }]);

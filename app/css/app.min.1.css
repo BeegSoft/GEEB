@@ -15344,3 +15344,9 @@ a.thumbnail.active {
   border-bottom: 1px solid #E5E5E5;
   border-radius: 0;
 }
+.viewAllComment{
+  padding-left: 80px;
+  padding-top: 12px;
+  padding-bottom: 21px;
+  cursor: pointer;
+}

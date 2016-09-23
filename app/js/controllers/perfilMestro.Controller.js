@@ -3,6 +3,8 @@ geebSoft
 	    function($firebaseArray, $scope, $sessionStorage, $localStorage ){
 	    	var vm = this;
 
+            vm.limit = 5;
+
             //Obteniendo los json de Firebase
 	    	var refTodosMaestros = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/TodosMaestros/');
             vm.arrayTodosMaestros = $firebaseArray(refTodosMaestros);
@@ -92,6 +94,10 @@ geebSoft
                     vm.promedioCalificacion = sumaCalificacion / vm.arrayCalificaciones.length;
                 });
                 alert('Gracias por calificar a este maestro!');
+            }
+
+            vm.masComentarios = function(){
+                vm.limit += 5;
             }
 
 	    }]);

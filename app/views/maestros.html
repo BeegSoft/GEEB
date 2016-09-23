@@ -15,7 +15,7 @@
 					</form>
 			</div>
 		</div>
-        <div class="container"  ng-repeat="maestro in vm.arrayTodosMaestros | filter: vm.buscarMaestro | limitTo : 5">              
+        <div class="container"  ng-repeat="maestro in vm.arrayTodosMaestros | filter: vm.buscarMaestro | limitTo : vm.limit">              
         	<div class="col-xs-3"></div>
             <div class="card col-xs-6" >
                 <div class="card-header">
@@ -47,9 +47,17 @@
                         </div>
                     </div>
                 </div>
+                
              </div>
              <div class="col-xs-3"></div>
-         </div>
+        </div>
+        <center>
+        <div class="viewAllComment" style="margin-right: 80px;">
+		    <button class=" btn btn-primary btn-sm" ng-click="vm.masComentarios()">Ver mas comentarios</button>
+		</div>
+		</center>
+
+         
      </div>
  </div>
 
