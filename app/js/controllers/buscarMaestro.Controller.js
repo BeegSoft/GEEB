@@ -4,6 +4,9 @@ geebSoft
 	    	var vm = this;
 
             vm.limit = 5;
+            vm.arrayVisitas = {};
+            vm.arrayTodosMaestros = {};
+            vm.buscarMaestro = '';
             
 	    	var refTodosMaestros = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/TodosMaestros/');
             vm.arrayTodosMaestros = $firebaseArray(refTodosMaestros);
@@ -18,10 +21,11 @@ geebSoft
                 vm.arrayVisitas = $firebaseArray(childVisitas);
                 
                 // refMaestros.child(maestro + '/visitas').set({ visitas: 1});
-            }
+            };
+
             vm.busqueda = function(buscar){
                 vm.buscarMaestro = buscar;
-            }
+            };
 
             vm.masComentarios = function(){
                 vm.limit += 5;

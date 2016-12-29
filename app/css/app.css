@@ -7528,11 +7528,11 @@ button.close {
 }
 /*!
  * Waves v0.7.4
- * http://fian.my.id/Waves 
- * 
- * Copyright 2014 Alfiana E. Sibuea and other contributors 
- * Released under the MIT license 
- * https://github.com/fians/Waves/blob/master/LICENSE 
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE
  */
 .waves-effect {
   position: relative;
@@ -7980,7 +7980,7 @@ a.waves-effect .waves-ripple {
 .di-block {
   display: inline-block !important;
 }
-/* 
+/*
  * Material Background Colors
  */
 .bgm-white {
@@ -8128,7 +8128,7 @@ a.waves-effect .waves-ripple {
   width: 100% !important;
 }
 /*
- * Border Radius 
+ * Border Radius
  */
 .brd-2 {
   border-radius: 2px;
@@ -11937,7 +11937,7 @@ a.thumbnail.active {
   box-shadow: 0 0 6px #EAEAEA;
 }
 /*
- * Lightbox  
+ * Lightbox
  */
 .lightbox .lightbox-item > img {
   width: 100%;
@@ -12961,6 +12961,7 @@ a.thumbnail.active {
   bottom: -25px;
   left: 50%;
   margin-left: -25px;
+
 }
 .lcb-alt .login-navigation {
   bottom: -75px;
@@ -16152,3 +16153,75 @@ select.chosen {
   margin-right: 0;
 }
 
+.formLogin{;
+}
+.card-login{
+  margin-top: 20%;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+.login-user{
+  padding-left: 8px;
+}
+.login-pass {
+  padding-left: 0px;
+}
+.socialLogin{
+  padding-left: 0px;
+}
+.formLoginFooter{
+  padding-bottom: 20px;
+}
+.social-facebook{
+  min-width: 300px;
+}
+.social-twitter{
+  min-width: 300px;
+  margin-top: 20px;
+}
+.title-text-login{
+  padding-top: 20px;
+  font-size: 1.7em;
+}
+.login-user-group{
+  padding-top: 16px;
+}
+.restablecer-password{
+  padding-top: 16px;
+}
+.btn-login{
+  max-width: 230px;
+  min-height: 40px;
+}
+.btn-group-login{
+  padding-top: 30px;
+}
+.hr-o hr:after {
+  content: "o";
+  position: relative;
+  top: -14px;
+  left: 45%;
+  display: inline-block;
+  width: 36px;
+  height: 24px;
+  background: #ffffff;
+  color: black;
+  font-size: 12px;
+  line-height: 24px;
+  padding-left: 15px;
+}
+.hr-login{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-color: #e0e0e0;
+}
+
+.btn-group-login i{
+  font-style: normal !important;
+}
+.subtitle-resetPassword{
+  padding-top: 25px;
+}
+.formLoginFooter{
+  padding-top: 25px;
+}
