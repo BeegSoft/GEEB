@@ -8,5 +8,6 @@ var geebSoft = angular.module('geebSoft', [
   'nouislider',
   'ngTable',
   'firebase',
-  'ngStorage'
+  'ngStorage',
+  'angular-toArrayFilter'
 ])

@@ -9,15 +9,15 @@ geebSoft
       //firebase reference
       var refGeeb = new Firebase('https://geeb-e2f11.firebaseio.com/');
 
-      //public var and function
+      //public var
       var vm = this;
-      vm.activate = activate;
       vm.email = '';
       vm.password = '';
       vm.checkUser = false;
       vm.resetEmail = '';
 
       //public functions
+      vm.activate = activate;
       vm.login = login;
       vm.resetPassword = resetPassword;
 
@@ -26,6 +26,7 @@ geebSoft
         firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             $location.path('/maestros');
+            $rootScope.$apply();
           }
         });
       }
@@ -51,6 +52,11 @@ geebSoft
               var errorMessage = error.message;
               var email = error.email;
               var credential = error.credential;
+              switch (errorCode){
+                case 'auth/account-exists-with-different-credential':
+                  alertService.error('Cuenta ya en uso', 'Ya tienes una cuenta con este correo electronico!');
+                  break;
+              }
             });
 
             break;

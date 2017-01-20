@@ -1,64 +1,73 @@
-<div class="timeline" ng-controller="perfilMestroCtrl as vm">
-    <div class="t-view" data-tv-type="text">
-        <div class="tv-body">
-            <div class="clearfix">
-                <form>
-                    Califica a tu maestro! <br>
-                    <fieldset class="rating">
-                            <input type="radio" ng-click="vm.rating(5)" id="star5" name="rating" value="true"/><label class = "full" for="star5" title="Awesome - 5 stars" ></label>
-                            <input type="radio" ng-click="vm.rating(4.5)" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-                            <input type="radio" ng-click="vm.rating(4)" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-                            <input type="radio" ng-click="vm.rating(3.5)" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-                            <input type="radio" ng-click="vm.rating(3)" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-                            <input type="radio" ng-click="vm.rating(2.5)" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-                            <input type="radio" ng-click="vm.rating(2)" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-                            <input type="radio" ng-click="vm.rating(1.5)" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-                            <input type="radio" ng-click="vm.rating(1)" id="star1" name="rating" value="1"  /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-                            <input type="radio" ng-click="vm.rating(.5)" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars" ></label>
-                        </fieldset>
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        <button class="btn btn-primary btn-sm" ng-click="vm.enviarCalificacion()">Enviar</button>
-                </form>
+<div class="timeline">
+  <div class="t-view" data-tv-type="text">
+    <!--<div class="tv-body">-->
+    <!--<ul class="tvb-stats">-->
+    <!--<li class="tvbs-comments"><i class="zmdi zmdi-comment"></i> {{vm.conta}} <span-->
+    <!--class="hidden-xs">Comentarios</span></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+
+    <div class="tv-comments maestro-comment">
+      <div class="row comentario-loader" ng-if="vm.loading">
+        <div class="col-xs-offset-3 col-xs-6 col-xs-offset-3">
+          <center>
+            <div class="preloader pls-blue pl-xl">
+              <svg class="pl-circular" viewBox="25 25 50 50">
+                <circle class="plc-path" cx="50" cy="50" r="20"></circle>
+              </svg>
             </div>
+          </center>
+        </div>
+      </div>
 
-            <ul class="tvb-stats">
-                    <li class="tvbs-comments" ><i class="zmdi zmdi-comment"></i> {{vm.conta}} <span class="hidden-xs">Comentarios</span></li>
-                
-                <li class="tvbs-views"><i class="zmdi zmdi-remove-red-eye"></i> 105K <span class="hidden-xs" ng-repeat="visita in vm.arrayVisitas">{{visita.visitas}} Visitas</span></li>
-            </ul>
-
+      <div class=" comentario-card" ng-repeat="comentario in vm.maestroComentarios" ng-hide="vm.loading">
+        <div class="row">
+          <div class="col-xs-2 comentario-imagen-perfil">
+            <img src="../img/profile-pics/perfil.png" alt="">
+          </div>
+          <div class="col-xs-10">
+            <div class="row">
+              <div class="col-xs-12 comentario-nombre">
+                {{comentario.usuarioNombre}}
+              </div>
+            </div>
+            <div class="row comentario-informacion">
+              <div class="col-xs-3 comentario-favorito comentario-icons">
+                {{comentario.usuarioLike}}
+                <img src="../img/icons/corazon.png" alt="">
+              </div>
+              <div class="col-xs-5 comentario-fecha comentario-icons">
+                {{comentario.usuarioFechaPublicacion}}
+                <img src="../img/icons/clock.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 comentario-comentario">
+            {{comentario.usuarioComentario}}
+          </div>
         </div>
 
-        <div class="tv-comments">
-            <ul class="tvc-lists">
-                <li class="media" ng-repeat="comentario in vm.arrayComentarios | limitTo: vm.limit">
-                    <a href="" class="tvh-user pull-left">
-                        <img class="img-responsive" src="img/profile-pics/1.jpg" alt="">
-                    </a>
-                    <div class="media-body">
-                        <strong class="d-block">{{comentario.titulo}}</strong>
-                        <small class="c-gray">{{comentario.fecha}}</small>
-
-                        <div class="m-t-10">{{comentario.cuerpo}}</div>
-
-                    </div>
-                </li>
-                <div class="viewAllComment "><button class=" btn btn-primary btn-sm" ng-click="vm.masComentarios()">Ver mas comentarios</button></div>
-                <li class="p-20">
-
-                    
-                    <form >
-                        <div class="fg-line">
-                            <input type="text" class="form-control auto-size" ng-model="vm.titulo" placeholder="Nombre" style="padding-bottom:10px;">
-                        </div>
-                        <br><br>
-                        <div class="fg-line">
-                            <textarea class="form-control auto-size" placeholder="Escribe un comentario..." rows="4" ng-model="vm.cuerpo"></textarea>
-                        </div>
-                        <button class="m-t-15 btn btn-primary btn-sm" ng-click="vm.anadirComentario()" >Enviar</button>
-                    </form>
-                </li>
-            </ul>
+        <div class="row">
+          <div class="col-xs-12 comentario-buttons">
+            <button class="btn waves-effect " ng-click="vm.funcionMeGusta(comentario.usuarioLike, comentario.key)">Me Gusta</button>
+            <button class="btn waves-effect ">Comentar</button>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-10 input-margin">
+      <div class="fg-line">
+        <input type="text" class="form-control input-comentar" placeholder="Escribe un comentario aqui...">
+      </div>
+    </div>
+    <div class="col-xs-1 col-xs-offset-1 button-comentar">
+      <button class="btn btn-success btn-float waves-effect waves-circle">
+        <i class="zmdi zmdi-arrow-forward"></i>
+      </button>
+    </div>
+  </div>
 </div>

@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "angular-animate": "^1.4.3",
+    "lodash": "^4.17.3",
     "ng-if-bootstrap-grid": "^0.1.0"
   }
 }

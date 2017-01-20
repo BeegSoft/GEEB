@@ -1,0 +1,20 @@
+<div class="row">
+  <form ng-submit="vm.agregarMaestro(vm.maestroNombre)">
+
+    <div class="col-xs-offset-4 col-xs-3 p-r-0" style="margin-top: 200px">
+      <span style="display: block; font-size: 18px" align="center">Ingresa el nombre del maestro:</span>
+      <div class="fg-line input-group buscar-maestros m-t-20">
+        <input type="text" class="form-control input-buscar" ng-model="vm.maestroNombre" placeholder="Pegar aqui..."
+               required>
+
+      </div>
+    </div>
+    <div class="col-xs-4 p-l-0"  style="margin-top: 244px">
+      <div align="left" class="m-r-0 p-r-0" >
+        <button type="submit"  class=" input-group-addon button-buscar waves-effect form-control" style="width:80px;">Agregar</button>
+      </div>
+      <button id="botonNotificar" notificacion-agregar-maestro data-from="top" data-align="center" data-type="inverse" ng-hide="true"></button>
+    </div>
+  </form>
+
+</div>

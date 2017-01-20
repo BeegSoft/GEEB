@@ -781,6 +781,7 @@ body.login-content:before {
 @media (min-width: 768px) {
   .timeline {
     padding: 50px;
+    padding-top: 15px !important;
     padding-left: 100px;
   }
 }
@@ -817,7 +818,7 @@ body.login-content:before {
 }
 
 .t-view .tv-body {
-  padding: 23px 25px;
+  padding: 10px 25px;
 }
 
 .t-view .tv-body .tvb-lightbox {
@@ -897,7 +898,7 @@ body.login-content:before {
 .t-view .tvb-stats {
   list-style: none;
   padding: 0;
-  margin: 10px 0 20px;
+  margin: 10px 0 10px;
 }
 
 .t-view .tvb-stats > li {

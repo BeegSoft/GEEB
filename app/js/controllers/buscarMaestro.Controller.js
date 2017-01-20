@@ -1,34 +1,36 @@
 geebSoft
-	.controller('buscarMaestroCtrl', ['$firebaseArray', '$scope',
-	    function($firebaseArray, $scope, $sessionStorage, $localStorage ){
-	    	var vm = this;
+	.controller('buscarMaestroCtrl', ['$firebaseArray', '$scope', '$rootScope', 'settings'
+    ,function($firebaseArray, $scope, $rootScope, settings, $sessionStorage, $localStorage ){
 
-            vm.limit = 5;
-            vm.arrayVisitas = {};
-            vm.arrayTodosMaestros = {};
-            vm.buscarMaestro = '';
-            
-	    	var refTodosMaestros = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/TodosMaestros/');
-            vm.arrayTodosMaestros = $firebaseArray(refTodosMaestros);
+      //public var
+      var vm = this;
+      vm.settings = settings;
+      vm.searchFilter = '';
+      vm.search = '';
+      vm.loading = true;
+      vm.maestros = {};
 
-            var refMaestros = new Firebase('https://geeb-e2f11.firebaseio.com/Maestros/');
-            var arrayMaestros = $firebaseArray(refMaestros);
+      //public functions
+      vm.filterToSearch = filterToSearch;
+      vm.guardarMaestro = guardarMaestro;
 
-            vm.Gnombre = function(maestro){
-                localStorage.setItem("nombre", maestro);
+      //private functions
+      function activate() {
+        var ref = firebase.database().ref('Maestros');
+        ref.on('value', function (snapshot) {
+          vm.maestros = snapshot.val();
+          vm.loading = false;
+          $rootScope.$apply();
+        });
+      }
+      activate();
 
-                var childVisitas = refMaestros.child(maestro + '/visitas');
-                vm.arrayVisitas = $firebaseArray(childVisitas);
-                
-                // refMaestros.child(maestro + '/visitas').set({ visitas: 1});
-            };
+      function filterToSearch(filter) {
+        vm.searchFilter = filter;
+      }
 
-            vm.busqueda = function(buscar){
-                vm.buscarMaestro = buscar;
-            };
+      function guardarMaestro(maestroNombre) {
+        localStorage.setItem('maestroNombre', maestroNombre);
+      }
 
-            vm.masComentarios = function(){
-                vm.limit += 5;
-            }
-
-	    }]);
+    }]);
