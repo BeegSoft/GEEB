@@ -34,14 +34,14 @@ Fixes
 - Ctrl + mouse wheel - scrolling instead zooming in Firefox and IE #275
 - Remove - Uncaught TypeError: Cannot set property 'onsync' of null #247
 - JS Error in console: Uncaught TypeError: Cannot read property 'defaultView' of null  #245
-- railposition outside a fixed div in Chrome 38 and IE not correct #450 
+- railposition outside a fixed div in Chrome 38 and IE not correct #450
 - Preserve Vertical scroll behavior after horizontal scrolling ends #451
 - Wrapped divs, fix rail position for content already scrolled
 - Detect content appends to page, refresh rail positions
 - Nicescrolls are not located in the new positions #446
 - Chrome, dragging cursor on touchbehavior losts mouse move
 - cantouch capability is detected as a false positive in WebKitGTK+ #367
-- Scrolling via touch not working on certain non-IOS webkit browsers (namely Cisco's IEC 4600 series) #389 
+- Scrolling via touch not working on certain non-IOS webkit browsers (namely Cisco's IEC 4600 series) #389
 - Chrome, cursor drag on "touchbehavior"=TRUE
 - IE10+ drag lock issue
 
@@ -59,7 +59,7 @@ Thanks to contributors!!
 - cantouch capability is detected as a false positive in WebKitGTK+ #368
 
 
-TODO
+
 - Mousewheel button "click scroll" not working #377
 - Not scrolling on lastest Firefox with HTML5 inside iframe #322
 - railpadding

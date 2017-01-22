@@ -16326,12 +16326,17 @@ form-log{
   margin-right: 10px !important;
   margin-top:20px;
   margin-bottom:20px;
+  font-size: 14px;
 }
 .comentario-buttons{
   margin-left: 10px;
 }
 .comentario-buttons button{
   margin-right:10px;
+}
+.comentario-seccion-datos{
+  margin-left: 10px;
+  margin-top: 5px;
 }
 .comentario-informacion{
   margin-top: 5px;

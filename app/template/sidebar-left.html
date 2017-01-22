@@ -1,34 +1,36 @@
-<div class="sidebar-inner c-overflow">    
-    <div class="profile-menu">
-        <a href="" toggle-submenu>
-            <div class="profile-pic">
-                <img src="img/profile-pics/fondo.jpg" alt="">
-            </div>
-
-            <div class="profile-info">
-                GeebSoft Company
-            </div>
-        </a>
-
-        
-    </div>
-
-    <ul class="main-menu">
-        
-        <li data-ui-sref-active="active">
-            <a data-ui-sref="maestros" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-accounts-list zmdi-hc-fw"></i> Maestros</a>
-        </li>
-        <!-- <li data-ui-sref-active="active">
-            <a data-ui-sref="materias" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-functions zmdi-hc-fw"></i> Materias</a>
-        </li>
- -->        <li data-ui-sref-active="active">
-            <a data-ui-sref="preHorarios" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-calendar"></i> Pre-horarios</a>
-        </li>
-        
-        <!-- <li data-ui-sref-active="active">
-            <a data-ui-sref="sugerencias" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-info zmdi-hc-fw"></i> Sugerencias</a>
-        </li> -->
-        
-        
+<div class="sidebar-inner c-overflow" ng-controller="sidebarCtrl as vm">
+  <div class="profile-menu">
+    <a href="" toggle-submenu>
+      <div class="profile-pic">
+        <img src="img/profile-pics/fondo.jpg" alt="">
+      </div>
+      <div class="profile-info">
+        {{vm.usuarioNombre}}
+        <i class="zmdi zmdi-caret-down"></i>
+      </div>
+    </a>
+    <ul class="main-menu" style="display: none;">
+      <!--<li><a href=""><i class="zmdi zmdi-account"></i> Ver perfil</a></li>-->
+      <!--<li><a href=""><i class="zmdi zmdi-settings"></i> Configuración</a></li>-->
+      <li><a href="#/login" ng-click="vm.cerrarSesion()"><i class="zmdi zmdi-power"></i> Cerrar sesión</a></li>
     </ul>
+  </div>
+
+  <ul class="main-menu">
+
+    <li data-ui-sref-active="active">
+      <a data-ui-sref="maestros" data-ng-click="mactrl.sidebarStat($event)"><i
+        class="zmdi zmdi-accounts-list zmdi-hc-fw"></i> Maestros</a>
+    </li>
+
+    <!--<li data-ui-sref-active="active">-->
+      <!--<a data-ui-sref="preHorarios" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-calendar"></i>-->
+        <!--Pre-horarios</a>-->
+    <!--</li>-->
+    <!-- <li data-ui-sref-active="active">
+        <a data-ui-sref="sugerencias" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-info zmdi-hc-fw"></i> Sugerencias</a>
+    </li> -->
+
+
+  </ul>
 </div>

@@ -29,6 +29,11 @@ geebSoft
         templateUrl: 'views/resetPassword.html',
         controller: 'loginCtrl as vm'
       })
+      .state('maestrosBuscar', {
+        url: '/maestros/:buscarMaestro',
+        templateUrl: 'views/maestros.html',
+        controller: 'buscarMaestroCtrl as vm'
+      })
       .state('maestros', {
         url: '/maestros',
         templateUrl: 'views/maestros.html',

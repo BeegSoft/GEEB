@@ -26,7 +26,7 @@ If you encounter an issue while using this package, please CC @dandv when you fi
 * Instantiation test
 
 
-# TODO
+# T
 
 * Make sure the library works with Meteor's reactivity - for example to auto-save to a collection
   transparently after the text changes.

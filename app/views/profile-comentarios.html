@@ -1,4 +1,4 @@
-<div class="timeline">
+<div class="timeline" ng-init="vm.activate()">
   <div class="t-view" data-tv-type="text">
     <!--<div class="tv-body">-->
     <!--<ul class="tvb-stats">-->
@@ -7,7 +7,7 @@
     <!--</ul>-->
     <!--</div>-->
 
-    <div class="tv-comments maestro-comment">
+    <div class="tv-comments maestro-comment" >
       <div class="row comentario-loader" ng-if="vm.loading">
         <div class="col-xs-offset-3 col-xs-6 col-xs-offset-3">
           <center>
@@ -23,20 +23,21 @@
       <div class=" comentario-card" ng-repeat="comentario in vm.maestroComentarios" ng-hide="vm.loading">
         <div class="row">
           <div class="col-xs-2 comentario-imagen-perfil">
-            <img src="../img/profile-pics/perfil.png" alt="">
+            <img src="{{comentario.usuarioFotoPerfil}}" alt="" class="img-circle" ng-show="comentario.usuarioFotoPerfil">
+            <img src="../img/profile-pics/perfil.png" alt=""  ng-hide="comentario.usuarioFotoPerfil">
           </div>
-          <div class="col-xs-10">
+          <div class="col-xs-9 comentario-seccion-datos">
             <div class="row">
               <div class="col-xs-12 comentario-nombre">
                 {{comentario.usuarioNombre}}
               </div>
             </div>
             <div class="row comentario-informacion">
-              <div class="col-xs-3 comentario-favorito comentario-icons">
-                {{comentario.usuarioLike}}
-                <img src="../img/icons/corazon.png" alt="">
-              </div>
-              <div class="col-xs-5 comentario-fecha comentario-icons">
+              <!--<div class="col-xs-3 comentario-favorito comentario-icons">-->
+                <!--{{comentario.usuarioLike}}-->
+                <!--<img src="../img/icons/corazon.png" alt="">-->
+              <!--</div>-->
+              <div class="col-xs-6 comentario-fecha comentario-icons">
                 {{comentario.usuarioFechaPublicacion}}
                 <img src="../img/icons/clock.png" alt="">
               </div>
@@ -49,23 +50,23 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-xs-12 comentario-buttons">
-            <button class="btn waves-effect " ng-click="vm.funcionMeGusta(comentario.usuarioLike, comentario.key)">Me Gusta</button>
-            <button class="btn waves-effect ">Comentar</button>
-          </div>
-        </div>
+        <!--<div class="row">-->
+          <!--<div class="col-xs-12 comentario-buttons">-->
+            <!--<button class="btn waves-effect " ng-click="vm.funcionMeGusta(comentario, comentario.usuarioLike)">Me Gusta</button>-->
+            <!--&lt;!&ndash;<button class="btn waves-effect ">Comentar</button>&ndash;&gt;-->
+          <!--</div>-->
+        <!--</div>-->
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-10 input-margin">
       <div class="fg-line">
-        <input type="text" class="form-control input-comentar" placeholder="Escribe un comentario aqui...">
+        <input type="text" class="form-control input-comentar" placeholder="Escribe un comentario aqui..." ng-model="vm.comentario" my-enter="vm.enviarComentario()">
       </div>
     </div>
     <div class="col-xs-1 col-xs-offset-1 button-comentar">
-      <button class="btn btn-success btn-float waves-effect waves-circle">
+      <button class="btn btn-success btn-float waves-effect waves-circle" ng-click="vm.enviarComentario()">
         <i class="zmdi zmdi-arrow-forward"></i>
       </button>
     </div>

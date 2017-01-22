@@ -23,7 +23,7 @@
       <div class="col-xs-offset-3 col-xs-6 col-xs-offset-3">
         <div class="buscar-maestros input-group fg-line">
           <input type="text" class="input-buscar form-control" placeholder="Escribe para buscar un maestro..."
-                 ng-model="vm.search">
+                 ng-model="vm.search" my-enter="vm.filterToSearch(vm.search)">
           <div class="waves-effect button-buscar input-group-addon" ng-click="vm.filterToSearch(vm.search)">Buscar</div>
         </div>
       </div>
@@ -40,10 +40,11 @@
         </center>
       </div>
     </div>
-    <div class="container" ng-repeat="maestro in vm.maestros | toArray"
-         ng-hide="vm.loading" ng-show="([maestro] | filter:vm.searchFilter).length > 0">
+    <div class="container" ng-repeat="maestro in vm.maestros | toArray "
+         ng-hide="vm.loading" ng-show="([maestro] | filter: {maestroNombre : vm.searchFilter} ).length > 0">
 
-      <div class="col-xs-offset-3 card col-xs-6 col-xs-offset-3" style="cursor: pointer" data-ui-sref="{{vm.settings.maestroPerfilUrl}}" ng-click="vm.guardarMaestro(maestro.maestroNombre)">
+      <div class="col-xs-offset-3 card col-xs-6 col-xs-offset-3" style="cursor: pointer"
+           data-ui-sref="{{vm.settings.maestroPerfilUrl}}" ng-click="vm.guardarMaestro(maestro.maestroNombre)">
         <div class="card-header">
           <div class="media">
             <div class="pull-left">
@@ -56,22 +57,23 @@
 
               <!--button class="btn btn-default btn-icon-text waves-effect" ng-repeat="materia in maestro.Materias"><i class="zmdi zmdi-close"></i>{{materia.materia}}</button-->
               <ul class="etiqueta-materias">
-                <li ng-repeat="materia in maestro.materiasImpartidasPorMaestro | limitTo: 4">{{materia.materiaNombre}}</li>
+                <li ng-repeat="materia in maestro.materiasImpartidasPorMaestro | limitTo: 4">{{materia.materiaNombre}}
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <center ng-hide="vm.loading">
-      <div class="viewAllComment" style="margin-right: 80px;">
-        <button class=" btn btn-primary btn-sm" ng-click="">Ver mas comentarios</button>
-      </div>
-    </center>
+    <!--<center ng-hide="vm.loading">-->
+    <!--<div class="viewAllComment" style="margin-right: 80px;">-->
+    <!--<button class=" btn btn-primary btn-sm" ng-click="">Ver mas comentarios</button>-->
+    <!--</div>-->
+    <!--</center>-->
 
 
-    </div>
-    </div>
+    <!--</div>-->
+    <!--</div>-->
 
 
   </section>

@@ -227,7 +227,7 @@
 - only the modules added via angular.bootstrap should be considered "already loaded"
  [#147](https://github.com/ocombe/ocLazyLoad/issues/147)
  
-## TODO before the release
+## 
 - try to remove most of the promises for perfs/tests
 - use moaaar ES6
 - clean up the code

@@ -44,7 +44,7 @@ body {
   right: 0;
   padding: 10px;
 
-  // TODO: remove/add the element from DOM instead
+  //
   &:not(.swal2-in) { pointer-events: none; }
 
   // backdrop

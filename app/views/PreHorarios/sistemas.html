@@ -1,612 +1,833 @@
-<header id="header" data-current-skin={{mactrl.currentSkin}} data-ng-include="'template/header.html'" data-ng-controller="headerCtrl as hctrl"></header>
+<header id="header" data-current-skin={{mactrl.currentSkin}} data-ng-include="'template/header.html'"
+        data-ng-controller="headerCtrl as hctrl"></header>
 
 <section id="main" ng-controller="geebController as vm">
-    <aside id="sidebar" data-ng-include="'template/sidebar-left.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
+  <aside id="sidebar" data-ng-include="'template/sidebar-left.html'"
+         data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
 
-    <aside id="chat" data-ng-include="'template/chat.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.right === true }"></aside>
+  <aside id="chat" data-ng-include="'template/chat.html'"
+         data-ng-class="{ 'toggled': mactrl.sidebarToggle.right === true }"></aside>
 
-    <section id="content">
-        <div class="container">
-<center>
-		<h1 style="margin-top:0px; padding-top:0px;">Ing. Sistemas</h1>
-	</center>
-</div>
+  <section id="content">
+    <div class="container">
+      <center>
+        <h1 style="margin-top:0px; padding-top:0px;">Ing. Sistemas</h1>
+      </center>
+    </div>
 
-<div class="row">
-	<div class="col-xs-2">
-		<center>
-			<h4 style="margin-bottom: 20px">Semestres</h4>
-			<button style="background-color: #d5e5f1;"i class="zmdi zmdi-collection-item-1 zmdi-hc-2x"</i></button><br><br>
-			<button style="background-color: #d5e5f1;"  i class="zmdi zmdi-collection-item-3 zmdi-hc-2x"</i></button><br><br>
-			<button style="background-color: #d5e5f1;" i class="zmdi zmdi-collection-item-5 zmdi-hc-2x"</i></button><br><br>
-			<button style="background-color: #d5e5f1;" i class="zmdi zmdi-collection-item-7 zmdi-hc-2x"</i></button><br><br>
-			<button style="background-color: #d5e5f1;" i class="zmdi zmdi-collection-item-9 zmdi-hc-2x"</i></button><br><br>
-		</center>
-	</div>
-	<div class="col-xs-10">
-		<center>
-			<h4 style="color: #34495e">Pre-Horarios</h4>
-		</center>
-        <p><center><h4 style="color:red">ESTUDIANTES DE NUEVO INGRESO: NO OLVIDEN INSCRIBIRSE EN EXTRAESCOLARES E INGLES. <br>
-        ES OBLIGACION CURSARLAS EN SU PRIMER SEMESTRE</h4></center></p>
+    <div class="row">
+      <div class="col-xs-2">
+        <center>
+          <h4 style="margin-bottom: 20px">Semestres</h4>
+          <button style="background-color: #d5e5f1;" i class="zmdi zmdi-collection-item-1 zmdi-hc-2x"
+          </i></button><br><br>
+          <button style="background-color: #d5e5f1;" i class="zmdi zmdi-collection-item-3 zmdi-hc-2x"
+          </i></button><br><br>
+          <button style="background-color: #d5e5f1;" i class="zmdi zmdi-collection-item-5 zmdi-hc-2x"
+          </i></button><br><br>
+          <button style="background-color: #d5e5f1;" i class="zmdi zmdi-collection-item-7 zmdi-hc-2x"
+          </i></button><br><br>
+          <button style="background-color: #d5e5f1;" i class="zmdi zmdi-collection-item-9 zmdi-hc-2x"
+          </i></button><br><br>
+        </center>
+      </div>
+      <div class="col-xs-10">
+        <center>
+          <h4 style="color: #34495e">Pre-Horarios</h4>
+        </center>
+        <p>
+        <center><h4 style="color:red">ESTUDIANTES DE NUEVO INGRESO: NO OLVIDEN INSCRIBIRSE EN EXTRAESCOLARES E INGLES.
+          <br>
+          ES OBLIGACION CURSARLAS EN SU PRIMER SEMESTRE</h4></center>
+        </p>
         <br><br>
-<p>PAQUETE 1/3</p><center><p>Primer Semestre</p></center>
-<div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr >
-						<th>Materia</th>
-						<th>Maestro</th>
-						<th>lunes</th>
-						<th>Martes</th>
-						<th>Miercoles</th>
-						<th>Jueves</th>
-						<th>Viernes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="info">
-						<td>CALCULO DIFERENCIAL</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('CORRAL SANDOVAL TRINIDAD')" style="cursor: pointer;">CORRAL SANDOVAL TRINIDAD</td>
-						<td>09:00 - 10:00 </td>
-						<td> </td>
-						<td>09:00 - 11:00</td>
-						<td> </td>
-						<td>09:00 - 11:00</td>
-                    </tr>                    
-                    <tr>
-						<td>FUNDAMENTOS DE PROGRAMACION</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('RODRIGUEZ PEREZ JOSE MIGUEL')" style="cursor: pointer;">RODRIGUEZ PEREZ JOSE MIGUEL</td>
-						<td>08:00 - 09:00</td>
-						<td>08:00 - 09:00 </td>
-						<td>08:00 - 09:00</td>
-						<td>08:00 - 09:00</td>
-						<td>08:00 - 09:00</td>
-                    </tr>
-                    <tr class="info">
-						<td>TALLER DE ETICA</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('HINOSTROSA GUTIERREZ RAMON')" style="cursor: pointer;">HINOSTROSA GUTIERREZ RAMON</td>
-						<td> </td>
-						<td> </td>
-						<td>11:00 - 13:00</td>
-						<td>  </td>
-						<td>11:00 - 13:00</td>
-                    </tr>
-                    <tr>
-						<td>MATEMATICAS DISCRETAS</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MARTINES CHAVEZ GABRIEL')" style="cursor: pointer;">MARTINES CHAVEZ GABRIEL</td>
-						<td>10:00 - 11:00 </td>
-						<td>09:00 - 11:00 </td>
-						<td></td>
-						<td>09:00 - 11:00</td>
-						<td></td>
-                    </tr>
-                    <tr class="info">
-						<td>TALLER DE ADMINISTRACION</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('GUILLERMO ROBLES')" style="cursor: pointer;">GUILLERMO ROBLES</td>
-						<td> </td>
-						<td>11:00 - 13:00 </td>
-						<td></td>
-						<td>11:00 - 13:00</td>
-						<td></td>
-                    </tr>
-                    <tr>
-						<td>FUNDAMENTOS DE INVESTIGACION</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('ISLAS SEPULVEDA MARIA DEL CARMEN')" style="cursor: pointer;">ISLAS SEPULVEDA MARIA DEL CARMEN</td>
-						<td> </td>
-						<td>13:00 - 14:00 </td>
-						<td>13:00 - 14:00 </td>
-						<td>13:00 - 14:00 </td>
-						<td>13:00 - 14:00 </td>
-                    </tr>
-                    <tr class="info">
-						<td>TUTORIAS I</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('ZEPEDA MIRAMONTES FRANCISCA LORENA')" style="cursor: pointer;">ZEPEDA MIRAMONTES FRANCISCA LORENA</td>
-						<td>11:00 - 13:00 </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-                    </tr>
-                    <tr>
-						<td>INGLES</td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td></td>
-						<td>  </td>
-						<td></td>
-                    </tr>
-                    <tr class="info">
-						<td>EXTRAESCOLARES I</td>
-						<td></td>
-						<td> </td>
-						<td> </td>
-						<td></td>
-						<td> </td>
-						<td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>        
-        <br><br>        
-<p>PAQUETE 2/3</p><center><p>Primer Semestre</p></center>
-<div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr >
-						<th>Materia</th>
-						<th>Maestro</th>
-						<th>lunes</th>
-						<th>Martes</th>
-						<th>Miercoles</th>
-						<th>Jueves</th>
-						<th>Viernes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="info">
-						<td>CALCULO DIFERENCIAL</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('CORRAL GUERRERO ROSA AHIME')" style="cursor: pointer;">CORRAL GUERRERO ROSA AHIME</td>
-						<td>10:00 - 11:00 </td>
-						<td>09:00 - 11:00 </td>
-						<td> </td>
-						<td>09:00 - 11:00 </td>
-						<td></td>
-                    </tr>                    
-                    <tr>
-						<td>FUNDAMENTOS DE PROGRAMACION</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('JAIME BURGOS VICTOR MANUEL')" style="cursor: pointer;">JAIME BURGOS VICTOR MANUEL</td>
-						<td>08:00 - 09:00</td>
-						<td>08:00 - 09:00 </td>
-						<td>08:00 - 09:00</td>
-						<td>08:00 - 09:00</td>
-						<td>08:00 - 09:00</td>
-                    </tr>
-                    <tr class="info">
-						<td>TALLER DE ETICA</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('HINOSTROSA GUTIERREZ RAMON')" style="cursor: pointer;">HINOSTROSA GUTIERREZ RAMON</td>
-						<td> </td>
-						<td>11:00 - 13:00 </td>
-						<td></td>
-						<td>11:00 - 13:00  </td>
-						<td></td>
-                    </tr>
-                    <tr>
-						<td>MATEMATICAS DISCRETAS</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MARTINES CHAVEZ GABRIEL')" style="cursor: pointer;">MARTINES CHAVEZ GABRIEL</td>
-						<td>09:00 - 10:00 </td>
-						<td> </td>
-						<td>09:00 - 11:00</td>
-						<td> </td>
-						<td>09:00 - 11:00</td>
-                    </tr>
-                    <tr class="info">
-						<td>TALLER DE ADMINISTRACION</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('GUILLERMO ROBLES')" style="cursor: pointer;">GUILLERMO ROBLES</td>
-						<td>11:00 - 13:00 </td>
-						<td></td>
-						<td>11:00 - 13:00</td>
-						<td></td>
-						<td> </td>
-                    </tr>
-                    <tr>
-						<td>FUNDAMENTOS DE INVESTIGACION</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('HINOSTROZA GUTIERREZ RAMON')" style="cursor: pointer;">HINOSTROZA GUTIERREZ RAMON</td>
-						<td> </td>
-						<td>13:00 - 14:00 </td>
-						<td>13:00 - 14:00 </td>
-						<td>13:00 - 14:00 </td>
-						<td>13:00 - 14:00 </td>
-                    </tr>
-                    <tr class="info">
-						<td>TUTORIAS I</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('FRANCISCO GABRIEL IBARRA LEMAS')" style="cursor: pointer;">FRANCISCO GABRIEL IBARRA LEMAS</td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td>11:00 - 13:00</td>
-                    </tr>
-                    <tr>
-						<td>INGLES</td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td></td>
-						<td>  </td>
-						<td></td>
-                    </tr>
-                    <tr class="info">
-						<td>EXTRAESCOLARES I</td>
-						<td></td>
-						<td> </td>
-						<td> </td>
-						<td></td>
-						<td> </td>
-						<td></td>
-                    </tr>
-                    <tr>
-						<td>FUNDAMENTOS DE PROGRAMACION</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('GOMEZ ENCINAS HAZAEL')" style="cursor: pointer;">GOMEZ ENCINAS HAZAEL</td>
-						<td>08:00 - 09:00</td>
-						<td>08:00 - 09:00 </td>
-						<td>08:00 - 09:00</td>
-						<td>08:00 - 09:00</td>
-						<td>08:00 - 09:00</td>
-                    </tr>
-                </tbody>
-            </table>
+        <p>PAQUETE 1/3</p>
+        <center><p>Primer Semestre</p></center>
+        <style type="text/css">
+          table.tableizer-table {
+            font-size: 14px;
+            border: 1px solid #CCC;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+
+          .tableizer-table td {
+            padding: 4px;
+            margin: 3px;
+            border: 1px solid #CCC;
+          }
+
+          .tableizer-table th {
+            background-color: #2980B9;
+            color: #FFF;
+            font-weight: bold;
+          }
+        </style>
+        <table class="tableizer-table">
+          <thead>
+          <tr class="tableizer-firstrow">
+            <th>PAQUETE S2A</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>SEGUNDO SEMESTRE</th>
+            <th>&nbsp;</th>
+            <th>MATUTINO</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Clave</td>
+            <td>&nbsp;</td>
+            <td>MATERIA</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>HRS</td>
+            <td>MAESTRO</td>
+            <td>Aula</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>DIAS</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Proy.</td>
+          </tr>
+          <tr>
+            <td>gpo.</td>
+            <td>&nbsp;</td>
+            <td>Carr. comp./ Gpo. Real</td>
+            <td>T</td>
+            <td>P</td>
+            <td>C</td>
+            <td>SEM</td>
+            <td>SIN MAESTRO</td>
+            <td>&nbsp;</td>
+            <td>Lun.</td>
+            <td>Mar.</td>
+            <td>Mie.</td>
+            <td>Jue.</td>
+            <td>Vier.</td>
+            <td>Estim.</td>
+          </tr>
+          <tr>
+            <td>AFC-0902</td>
+            <td>S2A</td>
+            <td>CALCULO INTEGRAL</td>
+            <td>3</td>
+            <td>2</td>
+            <td>5</td>
+            <td>5</td>
+            <td>CORRAL SANDOVAL TRINIDAD</td>
+            <td>A85</td>
+            <td>9-10</td>
+            <td>&nbsp;</td>
+            <td>9-11</td>
+            <td>&nbsp;</td>
+            <td>9-11</td>
+            <td>42</td>
+          </tr>
+          <tr>
+            <td>AEC-1058</td>
+            <td>S2A</td>
+            <td>QUIMICA</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+            <td>4</td>
+            <td>QUIROGA DE LA TORRE MARIA ANTONIETA</td>
+            <td>A85</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>11-13</td>
+            <td>&nbsp;</td>
+            <td>11-13</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>AEF-1052</td>
+            <td>S2A</td>
+            <td>PROBABILIDAD Y ESTADISTICA</td>
+            <td>3</td>
+            <td>2</td>
+            <td>5</td>
+            <td>5</td>
+            <td>**CORONADO JOSE DE LA CRUZ</td>
+            <td>A85</td>
+            <td>7-8</td>
+            <td>7-8</td>
+            <td>7-8</td>
+            <td>7-8</td>
+            <td>7-8</td>
+            <td>42</td>
+          </tr>
+          <tr>
+            <td>AEC-1008</td>
+            <td>S2A</td>
+            <td>CONTABILIDAD FINANCIERA</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+            <td>4</td>
+            <td>MENDEZ ALMA IRENE</td>
+            <td>A85</td>
+            <td>&nbsp;</td>
+            <td>11-13</td>
+            <td>&nbsp;</td>
+            <td>11-13</td>
+            <td>&nbsp;</td>
+            <td>43</td>
+          </tr>
+          <tr>
+            <td>SCC-1013</td>
+            <td>S2A</td>
+            <td>CULTURA EMPRESARIAL</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+            <td>4</td>
+            <td>ANA CHAVARIN AVILA</td>
+            <td>A85</td>
+            <td>&nbsp;</td>
+            <td>9-11</td>
+            <td>&nbsp;</td>
+            <td>9-11</td>
+            <td>&nbsp;</td>
+            <td>42</td>
+          </tr>
+          <tr>
+            <td>SCD-1020</td>
+            <td>S2A</td>
+            <td>PROG.ORIENT. A OBJETOS</td>
+            <td>2</td>
+            <td>3</td>
+            <td>5</td>
+            <td>5</td>
+            <td>RODRIGUEZ PEREZ JOSE MIGUEL</td>
+            <td>L55</td>
+            <td>8-9</td>
+            <td>8-9</td>
+            <td>8-9</td>
+            <td>8-9</td>
+            <td>8-9</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>S2A</td>
+            <td>TUTORÍAS 2</td>
+            <td>0</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>ZEPEDA MIRAMONTES FRANCISCA LORENA</td>
+            <td>A85</td>
+            <td>10-12</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>S2A</td>
+            <td>EXTRAESCOLAR II</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>SIN MAESTRO</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>S2A</td>
+            <td>PROG.ORIENT. A OBJETOS (INGLES)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GOMEZ ENCINAS HAZAEL</td>
+            <td>L52</td>
+            <td>8-9</td>
+            <td>8-9</td>
+            <td>8-9</td>
+            <td>8-9</td>
+            <td>8-9</td>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
+        <br><br>
+        <p>PAQUETE 2/3</p>
+        <center><p>Primer Semestre</p></center>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Materia</th>
+              <th>Maestro</th>
+              <th>lunes</th>
+              <th>Martes</th>
+              <th>Miercoles</th>
+              <th>Jueves</th>
+              <th>Viernes</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="info">
+              <td>CALCULO DIFERENCIAL</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('CORRAL GUERRERO ROSA AHIME')"
+                  style="cursor: pointer;">CORRAL GUERRERO ROSA AHIME
+              </td>
+              <td>10:00 - 11:00</td>
+              <td>09:00 - 11:00</td>
+              <td></td>
+              <td>09:00 - 11:00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>FUNDAMENTOS DE PROGRAMACION</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('JAIME BURGOS VICTOR MANUEL')"
+                  style="cursor: pointer;">JAIME BURGOS VICTOR MANUEL
+              </td>
+              <td>08:00 - 09:00</td>
+              <td>08:00 - 09:00</td>
+              <td>08:00 - 09:00</td>
+              <td>08:00 - 09:00</td>
+              <td>08:00 - 09:00</td>
+            </tr>
+            <tr class="info">
+              <td>TALLER DE ETICA</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('HINOSTROSA GUTIERREZ RAMON')"
+                  style="cursor: pointer;">HINOSTROSA GUTIERREZ RAMON
+              </td>
+              <td></td>
+              <td>11:00 - 13:00</td>
+              <td></td>
+              <td>11:00 - 13:00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>MATEMATICAS DISCRETAS</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MARTINES CHAVEZ GABRIEL')"
+                  style="cursor: pointer;">MARTINES CHAVEZ GABRIEL
+              </td>
+              <td>09:00 - 10:00</td>
+              <td></td>
+              <td>09:00 - 11:00</td>
+              <td></td>
+              <td>09:00 - 11:00</td>
+            </tr>
+            <tr class="info">
+              <td>TALLER DE ADMINISTRACION</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('GUILLERMO ROBLES')"
+                  style="cursor: pointer;">GUILLERMO ROBLES
+              </td>
+              <td>11:00 - 13:00</td>
+              <td></td>
+              <td>11:00 - 13:00</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>FUNDAMENTOS DE INVESTIGACION</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('HINOSTROZA GUTIERREZ RAMON')"
+                  style="cursor: pointer;">HINOSTROZA GUTIERREZ RAMON
+              </td>
+              <td></td>
+              <td>13:00 - 14:00</td>
+              <td>13:00 - 14:00</td>
+              <td>13:00 - 14:00</td>
+              <td>13:00 - 14:00</td>
+            </tr>
+            <tr class="info">
+              <td>TUTORIAS I</td>
+              <td data-ui-sref="pages.profile.profile-comentarios"
+                  ng-click="vm.Gnombre('FRANCISCO GABRIEL IBARRA LEMAS')" style="cursor: pointer;">FRANCISCO GABRIEL
+                IBARRA LEMAS
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>11:00 - 13:00</td>
+            </tr>
+            <tr>
+              <td>INGLES</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="info">
+              <td>EXTRAESCOLARES I</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>FUNDAMENTOS DE PROGRAMACION</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('GOMEZ ENCINAS HAZAEL')"
+                  style="cursor: pointer;">GOMEZ ENCINAS HAZAEL
+              </td>
+              <td>08:00 - 09:00</td>
+              <td>08:00 - 09:00</td>
+              <td>08:00 - 09:00</td>
+              <td>08:00 - 09:00</td>
+              <td>08:00 - 09:00</td>
+            </tr>
+            </tbody>
+          </table>
         </div>
-<br><br>        
-<p>PAQUETE 3/3</p><center><p>Primer Semestre</p></center>
-<div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr >
-						<th>Materia</th>
-						<th>Maestro</th>
-						<th>lunes</th>
-						<th>Martes</th>
-						<th>Miercoles</th>
-						<th>Jueves</th>
-						<th>Viernes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="info">
-						<td>CALCULO DIFERENCIAL</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('FERRER GALINDO LISSET')" style="cursor: pointer;">FERRER GALINDO LISSET</td>
-						<td>18:00 - 19:00 </td>
-						<td> </td>
-						<td>18:00 - 20:00 </td>
-						<td> </td>
-						<td>18:00 - 20:00</td>
-                    </tr>                    
-                    <tr>
-						<td>FUNDAMENTOS DE PROGRAMACION</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('JAIME BURGOS VICTOR MANUEL')" style="cursor: pointer;">JAIME BURGOS VICTOR MANUEL</td>
-						<td></td>
-						<td>14:00 - 16:00 </td>
-						<td></td>
-						<td>14:00 - 16:00</td>
-						<td>15:00 - 16:00</td>
-                    </tr>
-                    <tr class="info">
-						<td>TALLER DE ETICA</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('ISLAS SEPULVEDA MARIA DEL CARMEN')" style="cursor: pointer;">ISLAS SEPULVEDA MARIA DEL CARMEN</td>
-						<td>14:00 - 16:00 </td>
-						<td> </td>
-						<td>14:00 - 16:00</td>
-						<td> </td>
-						<td></td>
-                    </tr>
-                    <tr>
-						<td>MATEMATICAS DISCRETAS</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('SAÑU GINARTE ALEJANDRO')" style="cursor: pointer;">SAÑU GINARTE ALEJANDRO</td>
-						<td>19:00 - 20:00 </td>
-						<td>18:00 - 20:00 </td>
-						<td></td>
-						<td>18:00 - 20:00 </td>
-						<td></td>
-                    </tr>
-                    <tr class="info">
-						<td>TALLER DE ADMINISTRACION</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('NERISSA JACOBO')" style="cursor: pointer;">NERISSA JACOBO</td>
-						<td>16:00 - 18:00 </td>
-						<td></td>
-						<td>16:00 - 18:00</td>
-						<td></td>
-						<td> </td>
-                    </tr>
-                    <tr>
-						<td>FUNDAMENTOS DE INVESTIGACION</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MENESES MENDOZA SONIA REGINA')" style="cursor: pointer;">MENESES MENDOZA SONIA REGINA</td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td>16:00 - 18:00 </td>
-						<td>16:00 - 18:00 </td>
-                    </tr>
-                    <tr class="info">
-						<td>TUTORIAS I</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MENESES MENDOZA SONIA REGINA')" style="cursor: pointer;">MENESES MENDOZA SONIA REGINA</td>
-						<td> </td>
-						<td>16:00 - 18:00 </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-                    </tr>
-                    <tr>
-						<td>INGLES</td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td></td>
-						<td>  </td>
-						<td></td>
-                    </tr>
-                    <tr class="info">
-						<td>EXTRAESCOLARES I</td>
-						<td></td>
-						<td> </td>
-						<td> </td>
-						<td></td>
-						<td> </td>
-						<td></td>
-                    </tr>
-                    <tr>
-						<td>FUNDAMENTOS DE PROGRAMACION</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('FLORES LOPEZ JULIO CESAR')" style="cursor: pointer;">FLORES LOPEZ JULIO CESAR</td>
-						<td></td>
-						<td>14:00 - 16:00 </td>
-						<td></td>
-						<td>14:00 - 16:00</td>
-						<td>15:00 - 16:00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div><BR><BR>
-        <p><center><h4 style="color:red">ESTUDIANTES DE 3o. Y 5o. SEM: NO OLVIDEN INSCRIBIRSE EN ACTIVIDADES <BR>COMPLEMENTARIASDEBEN ACREDITARLAS ANTES DEL SEXTO SEMESTRE</h4></center></p>
-        <br><br>        
-<p>PAQUETE 1/3</p><center><p>Tercer Semestre</p></center>
-<div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr >
-						<th>Materia</th>
-						<th>Maestro</th>
-						<th>lunes</th>
-						<th>Martes</th>
-						<th>Miercoles</th>
-						<th>Jueves</th>
-						<th>Viernes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="info">
-						<td>CALCULO VECTORIAL</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('SOUFFLEE HDZ JUAN MANUEL')" style="cursor: pointer;">SOUFFLEE HDZ JUAN MANUEL</td>
-						<td>08:00 - 09:00 </td>
-						<td>07:00 - 09:00 </td>
-						<td> </td>
-						<td>07:00 - 09:00 </td>
-						<td> </td>
-                    </tr>                    
-                    <tr>
-						<td>ESTRUCTURA DE DATOS</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('SANCHEZ OZUNA MARGARITA')" style="cursor: pointer;">SANCHEZ OZUNA MARGARITA</td>
-						<td>09:00 - 10:00 </td>
-						<td>09:00 - 11:00 </td>
-						<td></td>
-						<td>09:00 - 11:00 </td>
-						<td></td>
-                    </tr>
-                    <tr class="info">
-						<td>TOPICOS AVANZ. DE PROG.</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('SEVILLA ZAZUETA MARTHA PATRICIA')" style="cursor: pointer;">SEVILLA ZAZUETA MARTHA PATRICIA</td>
-						<td>13:00 - 14:00 </td>
-						<td>13:00 - 14:00</td>
-						<td>13:00 - 14:00</td>
-						<td>13:00 - 14:00 </td>
-						<td>13:00 - 14:00</td>
-                    </tr>
-                    <tr>
-						<td>ALGEBRA LINEAL</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('BETANCOURT RIERA RENE')" style="cursor: pointer;">BETANCOURT RIERA RENE</td>
-						<td>12:00 - 13:00 </td>
-						<td>11:00 - 13:00 </td>
-						<td></td>
-						<td>11:00 - 13:00 </td>
-						<td></td>
-                    </tr>
-                    <tr class="info">
-						<td>DESARROLLO SUSTENTABLE</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('CARMEN BOJORQUEZ ALDAPA')" style="cursor: pointer;">CARMEN BOJORQUEZ ALDAPA</td>
-						<td>10:00 - 11:00 </td>
-						<td></td>
-						<td>09:00 - 11:00</td>
-						<td></td>
-						<td>09:00 - 11:00 </td>
-                    </tr>
-                    <tr>
-						<td>FISICA GENERAL</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('FERNANDEZ DIAZ ENRIQUE')" style="cursor: pointer;">FERNANDEZ DIAZ ENRIQUE</td>
-						<td>11:00 - 12:00 </td>
-						<td> </td>
-						<td>11:00 - 13:00 </td>
-						<td> </td>
-						<td>11:00 - 13:00 </td>
-                    </tr>
-                    <tr class="info">
-						<td>ACTIVIDAD COMPLEMENT. 4</td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-                    </tr>                    
-                </tbody>
-            </table>
+        <br><br>
+        <p>PAQUETE 3/3</p>
+        <center><p>Primer Semestre</p></center>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Materia</th>
+              <th>Maestro</th>
+              <th>lunes</th>
+              <th>Martes</th>
+              <th>Miercoles</th>
+              <th>Jueves</th>
+              <th>Viernes</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="info">
+              <td>CALCULO DIFERENCIAL</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('FERRER GALINDO LISSET')"
+                  style="cursor: pointer;">FERRER GALINDO LISSET
+              </td>
+              <td>18:00 - 19:00</td>
+              <td></td>
+              <td>18:00 - 20:00</td>
+              <td></td>
+              <td>18:00 - 20:00</td>
+            </tr>
+            <tr>
+              <td>FUNDAMENTOS DE PROGRAMACION</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('JAIME BURGOS VICTOR MANUEL')"
+                  style="cursor: pointer;">JAIME BURGOS VICTOR MANUEL
+              </td>
+              <td></td>
+              <td>14:00 - 16:00</td>
+              <td></td>
+              <td>14:00 - 16:00</td>
+              <td>15:00 - 16:00</td>
+            </tr>
+            <tr class="info">
+              <td>TALLER DE ETICA</td>
+              <td data-ui-sref="pages.profile.profile-comentarios"
+                  ng-click="vm.Gnombre('ISLAS SEPULVEDA MARIA DEL CARMEN')" style="cursor: pointer;">ISLAS SEPULVEDA
+                MARIA DEL CARMEN
+              </td>
+              <td>14:00 - 16:00</td>
+              <td></td>
+              <td>14:00 - 16:00</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>MATEMATICAS DISCRETAS</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('SAÑU GINARTE ALEJANDRO')"
+                  style="cursor: pointer;">SAÑU GINARTE ALEJANDRO
+              </td>
+              <td>19:00 - 20:00</td>
+              <td>18:00 - 20:00</td>
+              <td></td>
+              <td>18:00 - 20:00</td>
+              <td></td>
+            </tr>
+            <tr class="info">
+              <td>TALLER DE ADMINISTRACION</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('NERISSA JACOBO')"
+                  style="cursor: pointer;">NERISSA JACOBO
+              </td>
+              <td>16:00 - 18:00</td>
+              <td></td>
+              <td>16:00 - 18:00</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>FUNDAMENTOS DE INVESTIGACION</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MENESES MENDOZA SONIA REGINA')"
+                  style="cursor: pointer;">MENESES MENDOZA SONIA REGINA
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>16:00 - 18:00</td>
+              <td>16:00 - 18:00</td>
+            </tr>
+            <tr class="info">
+              <td>TUTORIAS I</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MENESES MENDOZA SONIA REGINA')"
+                  style="cursor: pointer;">MENESES MENDOZA SONIA REGINA
+              </td>
+              <td></td>
+              <td>16:00 - 18:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>INGLES</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="info">
+              <td>EXTRAESCOLARES I</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>FUNDAMENTOS DE PROGRAMACION</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('FLORES LOPEZ JULIO CESAR')"
+                  style="cursor: pointer;">FLORES LOPEZ JULIO CESAR
+              </td>
+              <td></td>
+              <td>14:00 - 16:00</td>
+              <td></td>
+              <td>14:00 - 16:00</td>
+              <td>15:00 - 16:00</td>
+            </tr>
+            </tbody>
+          </table>
         </div>
-        <br><br>        
-<p>PAQUETE 2/3</p><center><p>Tercer Semestre</p></center>
-<div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr >
-						<th>Materia</th>
-						<th>Maestro</th>
-						<th>lunes</th>
-						<th>Martes</th>
-						<th>Miercoles</th>
-						<th>Jueves</th>
-						<th>Viernes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="info">
-						<td>CALCULO VECTORIAL</td>
-						<td></td>
-						<td>12:00 - 13:00 </td>
-						<td>11:00 - 13:00 </td>
-						<td> </td>
-						<td>11:00 - 13:00 </td>
-						<td> </td>
-                    </tr>                    
-                    <tr>
-						<td>ESTRUCTURA DE DATOS</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('VALENZUELA HUERTA ANA ALICIA')" style="cursor: pointer;">VALENZUELA HUERTA ANA ALICIA</td>
-						<td>10:00 - 11:00 </td>
-						<td> </td>
-						<td>11:00 - 13:00</td>
-						<td> </td>
-						<td>11:00 - 13:00</td>
-                    </tr>
-                    <tr class="info">
-						<td>TOPICOS AVANZ. DE PROG.</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('GASCA FIGUEROA EDUARDO')" style="cursor: pointer;">GASCA FIGUEROA EDUARDO</td>
-						<td>07:00 - 08:00 </td>
-						<td></td>
-						<td>07:00 - 09:00</td>
-						<td></td>
-						<td>07:00 - 09:00</td>
-                    </tr>
-                    <tr>
-						<td>ALGEBRA LINEAL</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('TOLEDO GUILLEN CARLOS ARTURO')" style="cursor: pointer;">TOLEDO GUILLEN CARLOS ARTURO</td>
-						<td>09:00 - 10:00 </td>
-						<td> </td>
-						<td>09:00 - 11:00</td>
-						<td> </td>
-						<td>09:00 - 11:00</td>
-                    </tr>
-                    <tr class="info">
-						<td>DESARROLLO SUSTENTABLE</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('CARMEN BOJORQUEZ ALDAPA')" style="cursor: pointer;">CARMEN BOJORQUEZ ALDAPA</td>
-						<td>11:00 - 12:00 </td>
-						<td>09:00 - 11:00</td>
-						<td></td>
-						<td>09:00 - 11:00</td>
-						<td> </td>
-                    </tr>
-                    <tr>
-						<td>FISICA GENERAL</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('SOUFFLEE HERNANDEZ JUAN M')" style="cursor: pointer;">SOUFFLEE HERNANDEZ JUAN M</td>
-						<td>08:00 - 09:00 </td>
-						<td>07:00 - 09:00 </td>
-						<td> </td>
-						<td>07:00 - 09:00 </td>
-						<td> </td>
-                    </tr>
-                    <tr class="info">
-						<td>ACTIVIDAD COMPLEMENT. 4</td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-                    </tr>                    
-                </tbody>
-            </table>
+        <BR><BR>
+        <p>
+        <center><h4 style="color:red">ESTUDIANTES DE 3o. Y 5o. SEM: NO OLVIDEN INSCRIBIRSE EN ACTIVIDADES <BR>COMPLEMENTARIASDEBEN
+          ACREDITARLAS ANTES DEL SEXTO SEMESTRE</h4></center>
+        </p>
+        <br><br>
+        <p>PAQUETE 1/3</p>
+        <center><p>Tercer Semestre</p></center>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Materia</th>
+              <th>Maestro</th>
+              <th>lunes</th>
+              <th>Martes</th>
+              <th>Miercoles</th>
+              <th>Jueves</th>
+              <th>Viernes</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="info">
+              <td>CALCULO VECTORIAL</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('SOUFFLEE HDZ JUAN MANUEL')"
+                  style="cursor: pointer;">SOUFFLEE HDZ JUAN MANUEL
+              </td>
+              <td>08:00 - 09:00</td>
+              <td>07:00 - 09:00</td>
+              <td></td>
+              <td>07:00 - 09:00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ESTRUCTURA DE DATOS</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('SANCHEZ OZUNA MARGARITA')"
+                  style="cursor: pointer;">SANCHEZ OZUNA MARGARITA
+              </td>
+              <td>09:00 - 10:00</td>
+              <td>09:00 - 11:00</td>
+              <td></td>
+              <td>09:00 - 11:00</td>
+              <td></td>
+            </tr>
+            <tr class="info">
+              <td>TOPICOS AVANZ. DE PROG.</td>
+              <td data-ui-sref="pages.profile.profile-comentarios"
+                  ng-click="vm.Gnombre('SEVILLA ZAZUETA MARTHA PATRICIA')" style="cursor: pointer;">SEVILLA ZAZUETA
+                MARTHA PATRICIA
+              </td>
+              <td>13:00 - 14:00</td>
+              <td>13:00 - 14:00</td>
+              <td>13:00 - 14:00</td>
+              <td>13:00 - 14:00</td>
+              <td>13:00 - 14:00</td>
+            </tr>
+            <tr>
+              <td>ALGEBRA LINEAL</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('BETANCOURT RIERA RENE')"
+                  style="cursor: pointer;">BETANCOURT RIERA RENE
+              </td>
+              <td>12:00 - 13:00</td>
+              <td>11:00 - 13:00</td>
+              <td></td>
+              <td>11:00 - 13:00</td>
+              <td></td>
+            </tr>
+            <tr class="info">
+              <td>DESARROLLO SUSTENTABLE</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('CARMEN BOJORQUEZ ALDAPA')"
+                  style="cursor: pointer;">CARMEN BOJORQUEZ ALDAPA
+              </td>
+              <td>10:00 - 11:00</td>
+              <td></td>
+              <td>09:00 - 11:00</td>
+              <td></td>
+              <td>09:00 - 11:00</td>
+            </tr>
+            <tr>
+              <td>FISICA GENERAL</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('FERNANDEZ DIAZ ENRIQUE')"
+                  style="cursor: pointer;">FERNANDEZ DIAZ ENRIQUE
+              </td>
+              <td>11:00 - 12:00</td>
+              <td></td>
+              <td>11:00 - 13:00</td>
+              <td></td>
+              <td>11:00 - 13:00</td>
+            </tr>
+            <tr class="info">
+              <td>ACTIVIDAD COMPLEMENT. 4</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
         </div>
-                <br><br>        
-<p>PAQUETE 3/3</p><center><p>Tercer Semestre</p></center>
-<div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr >
-						<th>Materia</th>
-						<th>Maestro</th>
-						<th>lunes</th>
-						<th>Martes</th>
-						<th>Miercoles</th>
-						<th>Jueves</th>
-						<th>Viernes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="info">
-						<td>CALCULO INTEGRAL</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('AGANZA TORRES ALAN')" style="cursor: pointer;">AGANZA TORRES ALAN</td>
-						<td>15:00 - 16:00 </td>
-						<td>14:00 - 16:00 </td>
-						<td> </td>
-						<td>14:00 - 16:00 </td>
-						<td> </td>
-                    </tr>                    
-                    <tr>
-						<td>PROG.ORIENT. A OBJETOS</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('NAVA AVILES CARLOS ALBERTO')" style="cursor: pointer;">NAVA AVILES CARLOS ALBERTO</td>
-						<td>18:00 - 19:00 </td>
-						<td> </td>
-						<td>18:00 - 20:00</td>
-						<td> </td>
-						<td>18:00 - 20:00</td>
-                    </tr>
-                    <tr class="info">
-						<td>TOPICOS AVANZ. DE PROG.</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MENDOZA ROBLES ALFONSO')" style="cursor: pointer;">MENDOZA ROBLES ALFONSO</td>
-						<td>16:00 - 17:00 </td>
-						<td>16:00 - 18:00 </td>
-						<td></td>
-						<td>16:00 - 18:00 </td>
-						<td></td>
-                    </tr>
-                    <tr>
-						<td>ALGEBRA LINEAL</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('FERRER GALINDO LISSET')" style="cursor: pointer;">FERRER GALINDO LISSET</td>
-						<td>17:00 - 18:00 </td>
-						<td> </td>
-						<td>16:00 - 18:00</td>
-						<td> </td>
-						<td>16:00 - 18:00</td>
-                    </tr>
-                    <tr class="info">
-						<td>DESARROLLO SUSTENTABLE</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('BOJORQUEZ LOPEZ BRENDA')" style="cursor: pointer;">BOJORQUEZ LOPEZ BRENDA</td>
-						<td>14:00 - 15:00 </td>
-						<td> </td>
-						<td>14:00 - 16:00</td>
-						<td> </td>
-						<td>14:00 - 16:00</td>
-                    </tr>
-                    <tr>
-						<td>FISICA GENERAL</td>
-						<td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('FLEITAS TRUJILLO NORBERTO')" style="cursor: pointer;">FLEITAS TRUJILLO NORBERTO</td>
-						<td>19:00 - 20:00 </td>
-						<td>18:00 - 20:00 </td>
-						<td> </td>
-						<td>18:00 - 20:00 </td>
-						<td> </td>
-                    </tr>
-                    <tr class="info">
-						<td>ACTIVIDAD COMPLEMENT. 4</td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-                    </tr>  
-                    <tr>
-						<td>EXTRAESCOLAR II</td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-                    </tr>                  
-                </tbody>
-            </table>
-        </div>                     
-	</div>
-</div>
+        <br><br>
+        <p>PAQUETE 2/3</p>
+        <center><p>Tercer Semestre</p></center>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Materia</th>
+              <th>Maestro</th>
+              <th>lunes</th>
+              <th>Martes</th>
+              <th>Miercoles</th>
+              <th>Jueves</th>
+              <th>Viernes</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="info">
+              <td>CALCULO VECTORIAL</td>
+              <td></td>
+              <td>12:00 - 13:00</td>
+              <td>11:00 - 13:00</td>
+              <td></td>
+              <td>11:00 - 13:00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ESTRUCTURA DE DATOS</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('VALENZUELA HUERTA ANA ALICIA')"
+                  style="cursor: pointer;">VALENZUELA HUERTA ANA ALICIA
+              </td>
+              <td>10:00 - 11:00</td>
+              <td></td>
+              <td>11:00 - 13:00</td>
+              <td></td>
+              <td>11:00 - 13:00</td>
+            </tr>
+            <tr class="info">
+              <td>TOPICOS AVANZ. DE PROG.</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('GASCA FIGUEROA EDUARDO')"
+                  style="cursor: pointer;">GASCA FIGUEROA EDUARDO
+              </td>
+              <td>07:00 - 08:00</td>
+              <td></td>
+              <td>07:00 - 09:00</td>
+              <td></td>
+              <td>07:00 - 09:00</td>
+            </tr>
+            <tr>
+              <td>ALGEBRA LINEAL</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('TOLEDO GUILLEN CARLOS ARTURO')"
+                  style="cursor: pointer;">TOLEDO GUILLEN CARLOS ARTURO
+              </td>
+              <td>09:00 - 10:00</td>
+              <td></td>
+              <td>09:00 - 11:00</td>
+              <td></td>
+              <td>09:00 - 11:00</td>
+            </tr>
+            <tr class="info">
+              <td>DESARROLLO SUSTENTABLE</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('CARMEN BOJORQUEZ ALDAPA')"
+                  style="cursor: pointer;">CARMEN BOJORQUEZ ALDAPA
+              </td>
+              <td>11:00 - 12:00</td>
+              <td>09:00 - 11:00</td>
+              <td></td>
+              <td>09:00 - 11:00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>FISICA GENERAL</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('SOUFFLEE HERNANDEZ JUAN M')"
+                  style="cursor: pointer;">SOUFFLEE HERNANDEZ JUAN M
+              </td>
+              <td>08:00 - 09:00</td>
+              <td>07:00 - 09:00</td>
+              <td></td>
+              <td>07:00 - 09:00</td>
+              <td></td>
+            </tr>
+            <tr class="info">
+              <td>ACTIVIDAD COMPLEMENT. 4</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
         </div>
-    </section>
+        <br><br>
+        <p>PAQUETE 3/3</p>
+        <center><p>Tercer Semestre</p></center>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Materia</th>
+              <th>Maestro</th>
+              <th>lunes</th>
+              <th>Martes</th>
+              <th>Miercoles</th>
+              <th>Jueves</th>
+              <th>Viernes</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="info">
+              <td>CALCULO INTEGRAL</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('AGANZA TORRES ALAN')"
+                  style="cursor: pointer;">AGANZA TORRES ALAN
+              </td>
+              <td>15:00 - 16:00</td>
+              <td>14:00 - 16:00</td>
+              <td></td>
+              <td>14:00 - 16:00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>PROG.ORIENT. A OBJETOS</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('NAVA AVILES CARLOS ALBERTO')"
+                  style="cursor: pointer;">NAVA AVILES CARLOS ALBERTO
+              </td>
+              <td>18:00 - 19:00</td>
+              <td></td>
+              <td>18:00 - 20:00</td>
+              <td></td>
+              <td>18:00 - 20:00</td>
+            </tr>
+            <tr class="info">
+              <td>TOPICOS AVANZ. DE PROG.</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('MENDOZA ROBLES ALFONSO')"
+                  style="cursor: pointer;">MENDOZA ROBLES ALFONSO
+              </td>
+              <td>16:00 - 17:00</td>
+              <td>16:00 - 18:00</td>
+              <td></td>
+              <td>16:00 - 18:00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ALGEBRA LINEAL</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('FERRER GALINDO LISSET')"
+                  style="cursor: pointer;">FERRER GALINDO LISSET
+              </td>
+              <td>17:00 - 18:00</td>
+              <td></td>
+              <td>16:00 - 18:00</td>
+              <td></td>
+              <td>16:00 - 18:00</td>
+            </tr>
+            <tr class="info">
+              <td>DESARROLLO SUSTENTABLE</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('BOJORQUEZ LOPEZ BRENDA')"
+                  style="cursor: pointer;">BOJORQUEZ LOPEZ BRENDA
+              </td>
+              <td>14:00 - 15:00</td>
+              <td></td>
+              <td>14:00 - 16:00</td>
+              <td></td>
+              <td>14:00 - 16:00</td>
+            </tr>
+            <tr>
+              <td>FISICA GENERAL</td>
+              <td data-ui-sref="pages.profile.profile-comentarios" ng-click="vm.Gnombre('FLEITAS TRUJILLO NORBERTO')"
+                  style="cursor: pointer;">FLEITAS TRUJILLO NORBERTO
+              </td>
+              <td>19:00 - 20:00</td>
+              <td>18:00 - 20:00</td>
+              <td></td>
+              <td>18:00 - 20:00</td>
+              <td></td>
+            </tr>
+            <tr class="info">
+              <td>ACTIVIDAD COMPLEMENT. 4</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>EXTRAESCOLAR II</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
 </section>
 
 <footer id="footer" data-ng-include="'template/footer.html'"></footer>
